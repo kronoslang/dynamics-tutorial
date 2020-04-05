@@ -19,23 +19,20 @@
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more..."]]
- :pos [211 156]
- }
+ :pos [211 156]}
  "5mcstichevt59el" 
 {:inputs ["sig" "threshold" "ratio"]
  :label "Attenuation($sig $threshold $ratio)"
  :name "find gain target"
  :outputs [""]
  :parsed [:fn "Attenuation" [:tuple [:free-var "sig"] [:free-var "threshold"] [:free-var "ratio"]]]
- :pos [-141 16]
- }
+ :pos [-141 16]}
  "7zvuy3clb9jjzjo" 
 {:inputs ["db"]
  :label "From-dB($db)"
  :outputs [""]
  :parsed [:fn "From-dB" [:tuple [:free-var "db"]]]
- :pos [253 -178]
- }
+ :pos [253 -178]}
  "glpro485l3w7vt5" 
 {:inputs []
  :label "-24 .o 24"
@@ -49,46 +46,40 @@
  :label "o))"
  :outputs ["thru"]
  :parsed [:playback [:free-var "sig"]]
- :pos [319 211]
- }
+ :pos [319 211]}
  "m2lcjs8hnfz9efw" 
 {:inputs []
  :label "-60 -o- 0"
  :name "threshold"
  :outputs [""]
  :parsed [:widget "o8fjos" 0 {:type :slider, :limits [[:float "-60"] [:float "0"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
- :pos [-392 -269]
- }
+ :pos [-392 -269]}
  "q8prjlc1b7l2i6q" 
 {:inputs []
  :label "Test-Drums()"
  :outputs [""]
  :parsed [:fn "Test-Drums" [:tuple]]
- :pos [-397 146]
- }
+ :pos [-397 146]}
  "sq62nydi5e3dw94" 
 {:inputs []
  :label "10 -x- 500"
  :name "speed"
  :outputs [""]
  :parsed [:widget "nh17gn" 0.3219046456473214 {:type :slider, :limits [[:float "10"] [:float "500"]], :render [:limits], :size 3, :orientation :vertical, :curve :exponential}]
- :pos [-11 -269]
- }
+ :pos [-11 -269]}
  "vnz3ke7gp4x8s88" 
 {:inputs ["sig" "cutoff"]
  :label "Filter:Lpf6($sig $cutoff)"
  :name "gain lag circuit"
  :outputs [""]
  :parsed [:fn "Filter:Lpf6" [:tuple [:free-var "sig"] [:free-var "cutoff"]]]
- :pos [80 65]
- }
+ :pos [80 65]}
  "yw9qsy1a948rsq" 
 {:inputs []
  :label "1 .o 8"
  :name "ratio"
  :outputs [""]
  :parsed [:widget "-5hmpu0" 1 {:type :dial, :skin :circular, :min [:float "1"], :max [:float "8"]}]
- :pos [-188 -269]
- }}
+ :pos [-188 -269]}}
  :scale 1
  :scroll [0 0]}}

@@ -19,36 +19,31 @@
  :label "1"
  :outputs [""]
  :parsed [:float "1"]
- :pos [-316 -151]
- }
+ :pos [-316 -151]}
  "bdicwh6o25823el" 
 {:inputs []
  :label "drums_dry.wav"
  :outputs ["sample-rate" "num-frames" "sampler-fn"]
  :parsed [:asset "drums_dry.wav"]
- :pos [-200 -66]
- }
+ :pos [-200 -66]}
  "eiwagxlbio3lbjf" 
 {:ephemeral-inputs #{"arg"}
  :inputs ["fn" "arg" "arg..."]
  :label "Eval($fn $arg...)"
  :outputs [""]
  :parsed [:fn "Eval" [:tuple [:free-var "fn"] [:free-var "arg"] [:free-var "arg..."]]]
- :pos [199 33]
- }
+ :pos [199 33]}
  "j6cegl7sqqt3p" 
 {:inputs ["sig"]
  :label "Filter:Integrate($sig 1)"
  :outputs [""]
  :parsed [:fn "Filter:Integrate" [:tuple [:free-var "sig"] [:float "1"]]]
- :pos [31 -152]
- }
+ :pos [31 -152]}
  "yabbsl42bh07c6p" 
 {:inputs ["sig"]
  :label "Gen:Signal($sig)"
  :outputs [""]
  :parsed [:fn "Gen:Signal" [:tuple [:free-var "sig"]]]
- :pos [-206 -151]
- }}
+ :pos [-206 -151]}}
  :scale 1
  :scroll [0 0]}}

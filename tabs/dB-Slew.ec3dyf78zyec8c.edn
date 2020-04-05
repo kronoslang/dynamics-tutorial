@@ -4,19 +4,21 @@
  :patch
 {:cables
 {["4nmc6ki4ccks4zf" 0] [:fixed "7mhgtrisbvjfv4y" 0]
- ["8a47m8bbz7pyt6" 0] [:fixed "jqv1yng9qgl2rmp" 0]
  ["8dwbsuqq8q5jm89" 0] [:fixed "8ncgoj7jyak4xnf" 0]
  ["8dwbsuqq8q5jm89" 1] [:fixed "bhteghafu42hubb" 0]
  ["8ncgoj7jyak4xnf" 0] [:fixed "zdkxt6e27u089mq" 0]
  ["8wml674pug153r8" 0] [:fixed "jqv1yng9qgl2rmp" 0]
  ["bhteghafu42hubb" 0] [:fixed "4nmc6ki4ccks4zf" 0]
+ ["die6ho2p1w0kk0" 0] [:fixed "7mhgtrisbvjfv4y" 0]
  ["g469j15y976uhbg" 0] [:fixed "7mhgtrisbvjfv4y" 2]
  ["jqv1yng9qgl2rmp" 0] [:fixed "7mhgtrisbvjfv4y" 0]
  ["jqv1yng9qgl2rmp" 1] [:fixed "qv7gqqk2pnqr04y" 0]
  ["jqv1yng9qgl2rmp" 2] [:fixed "to6dhmf9g9rup39" 0]
- ["qv7gqqk2pnqr04y" 0] [:fixed "8a47m8bbz7pyt6" 0]
+ ["lox0rpf07sy1sd" 0] [:fixed "die6ho2p1w0kk0" 0]
+ ["lox0rpf07sy1sd" 1] [:fixed "jqv1yng9qgl2rmp" 0]
+ ["qv7gqqk2pnqr04y" 0] [:fixed "lox0rpf07sy1sd" 0]
  ["qv7gqqk2pnqr04y" 1] [:fixed "8dwbsuqq8q5jm89" 0]
- ["to6dhmf9g9rup39" 0] [:fixed "8a47m8bbz7pyt6" 0]
+ ["to6dhmf9g9rup39" 0] [:fixed "lox0rpf07sy1sd" 0]
  ["to6dhmf9g9rup39" 1] [:fixed "yav0jy1bzk3h9rh" 0]
  ["yav0jy1bzk3h9rh" 0] [:fixed "g469j15y976uhbg" 0]
  ["yav0jy1bzk3h9rh" 1] [:fixed "bhteghafu42hubb" 0]
@@ -36,15 +38,6 @@
  :parsed "arg"
  :pos [-496 -329]
  }
- "8a47m8bbz7pyt6" 
-{:cable-midpoints 
-{0 [-118 85]}
- :inputs ["sig~"]
- :label "z-1($sig~)"
- :outputs [""]
- :parsed [:fn "z-1" [:tuple [:free-var "sig~"]]]
- :pos [-242 -55]
- }
  "8dwbsuqq8q5jm89" 
 {:flip-y true
  :inputs ["a" "b"]
@@ -61,7 +54,9 @@
  :pos [-231 -266]
  }
  "8wml674pug153r8" 
-{:inputs ["out"]
+{:cable-midpoints 
+{}
+ :inputs ["out"]
  :label "$out"
  :outputs [""]
  :parsed [:free-var "out"]
@@ -74,6 +69,12 @@
  :parsed [:infix [:float "1"] "/" [:free-var "b"]]
  :pos [-217 -148]
  }
+ "die6ho2p1w0kk0" 
+{:inputs ["type"]
+ :label "Coerce($type #1)"
+ :outputs [""]
+ :parsed [:fn "Coerce" [:tuple [:free-var "type"] [:invariant "1"]]]
+ :pos [-321 57]}
  "g469j15y976uhbg" 
 {:inputs ["db"]
  :label "From-dB($db)"
@@ -87,7 +88,14 @@
  :outputs [""]
  :parsed [:fn "Math:Clamp" [:tuple [:free-var "x"] [:free-var "low-bound"] [:free-var "high-bound"]]]
  :pos [115 -34]
- :selected true}
+ }
+ "lox0rpf07sy1sd" 
+{:inputs ["init" "sig~"]
+ :label "z-1($init $sig~)"
+ :outputs [""]
+ :parsed [:fn "z-1" [:tuple [:free-var "init"] [:free-var "sig~"]]]
+ :pos [-95 153]
+ }
  "qv7gqqk2pnqr04y" 
 {:inputs ["a" "b" "more..."]
  :label "*"

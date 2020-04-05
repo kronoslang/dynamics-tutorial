@@ -32,12 +32,12 @@ nte4zfibrqjcug78-0
 }
 
 Test-Drums() {
-(nbdicwh6o25823el-0 nbdicwh6o25823el-1 nbdicwh6o25823el-2) = :Audio:Loop("drums_dry.wav")
-(nb6xcgl05paicrdv-0) = 1
-(nyabbsl42bh07c6p-0) = Gen:Signal(nb6xcgl05paicrdv-0)
-(nj6cegl7sqqt3p-0) = Filter:Integrate(nyabbsl42bh07c6p-0 1)
-(neiwagxlbio3lbjf-0) = Eval(nbdicwh6o25823el-2 nj6cegl7sqqt3p-0 )
 (n8f266f7rfp9x843-0) = neiwagxlbio3lbjf-0
+(nb6xcgl05paicrdv-0) = 1
+(nbdicwh6o25823el-0 nbdicwh6o25823el-1 nbdicwh6o25823el-2) = :Audio:Loop("drums_dry.wav")
+(neiwagxlbio3lbjf-0) = Eval(nbdicwh6o25823el-2 nj6cegl7sqqt3p-0 )
+(nj6cegl7sqqt3p-0) = Filter:Integrate(nyabbsl42bh07c6p-0 1)
+(nyabbsl42bh07c6p-0) = Gen:Signal(nb6xcgl05paicrdv-0)
 n8f266f7rfp9x843-0
 }
 
@@ -74,18 +74,29 @@ Attack-Release-Compressor() {
 nvb16nu2as4otajy-0
 }
 
-
+db-Slew-Compressor() {
+(nhv06346n1a92e71-0) = 1
+(nb1193sgogopnf41-0) = 0.6576189313616071
+(nttlq0ohiwatp9eg-0) = Test-Drums()
+(nl89rjh5fm3q8cqb-0) = 0.1861903599330357
+(n7xq5zbitvoledge-0) = dB-Slew(ngmcunb6iaaxovf-0 nhv06346n1a92e71-0 nl89rjh5fm3q8cqb-0)
+(neo4ea7389vlo2t1-0) = Math:Log10(n7xq5zbitvoledge-0)
+(ntqb2r81bbft58iy-0) = 0.74
+(ngmcunb6iaaxovf-0) = Attenuation(nttlq0ohiwatp9eg-0 nb1193sgogopnf41-0 ntqb2r81bbft58iy-0)
+neo4ea7389vlo2t1-0
+}
 
 dB-Slew(sig attack release) {
 (nzdkxt6e27u089mq-0) = Neg(n7mhgtrisbvjfv4y-1)
-(n8a47m8bbz7pyt6-0) = z-1(njqv1yng9qgl2rmp-0)
 (n4nmc6ki4ccks4zf-0) = Rate-of(n7mhgtrisbvjfv4y-0)
 (n8ncgoj7jyak4xnf-0) = From-dB(nzdkxt6e27u089mq-0)
 (ng469j15y976uhbg-0) = From-dB(n7mhgtrisbvjfv4y-2)
+(nlox0rpf07sy1sd-0) = z-1(ndie6ho2p1w0kk0-0 njqv1yng9qgl2rmp-0)
 (njqv1yng9qgl2rmp-0) = Math:Clamp(n7mhgtrisbvjfv4y-0 nqv7gqqk2pnqr04y-0 nto6dhmf9g9rup39-0)
-(nqv7gqqk2pnqr04y-0) = (n8a47m8bbz7pyt6-0 * n8dwbsuqq8q5jm89-0)
+(nqv7gqqk2pnqr04y-0) = (nlox0rpf07sy1sd-0 * n8dwbsuqq8q5jm89-0)
+(ndie6ho2p1w0kk0-0) = Coerce(n7mhgtrisbvjfv4y-0 #1)
 (nyav0jy1bzk3h9rh-0) = Math:Pow(ng469j15y976uhbg-0 nbhteghafu42hubb-0)
-(nto6dhmf9g9rup39-0) = (n8a47m8bbz7pyt6-0 * nyav0jy1bzk3h9rh-0)
+(nto6dhmf9g9rup39-0) = (nlox0rpf07sy1sd-0 * nyav0jy1bzk3h9rh-0)
 (n8wml674pug153r8-0) = njqv1yng9qgl2rmp-0
 (nbhteghafu42hubb-0) = (1 / n4nmc6ki4ccks4zf-0)
 (n7mhgtrisbvjfv4y-0 n7mhgtrisbvjfv4y-1 n7mhgtrisbvjfv4y-2) = arg

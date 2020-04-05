@@ -1,4 +1,4 @@
-{
+{:identifier "db-Slew-Compressor"
  :identity "e1jdun79v05wxbw"
  :patch
 {:cables
@@ -6,8 +6,10 @@
  ["7xq5zbitvoledge" 1] [:fixed "hv06346n1a92e71" 0]
  ["7xq5zbitvoledge" 2] [:fixed "l89rjh5fm3q8cqb" 0]
  ["bs06q3tmi67q4sq" 0] [:fixed "ttlq0ohiwatp9eg" 0]
+ ["bs06q3tmi67q4sq" 1] [:fixed "7xq5zbitvoledge" 0]
  ["bs06q3tmi67q4sq" 2] [:fixed "e4z2uau96ybnkz7" 0]
  ["e4z2uau96ybnkz7" 0] [:fixed "sku1e1r55nwj5be" 0]
+ ["eo4ea7389vlo2t1" 0] [:fixed "7xq5zbitvoledge" 0]
  ["gmcunb6iaaxovf" 0] [:fixed "ttlq0ohiwatp9eg" 0]
  ["gmcunb6iaaxovf" 1] [:fixed "b1193sgogopnf41" 0]
  ["gmcunb6iaaxovf" 2] [:fixed "tqb2r81bbft58iy" 0]
@@ -22,10 +24,10 @@
  }
  "b1193sgogopnf41" 
 {:inputs []
- :label "-60 -o- 0"
+ :label "-50 -o- 0"
  :name "threshold"
  :outputs [""]
- :parsed [:widget "beztq8" 0.5290475027901785 {:type :slider, :limits [[:float "-60"] [:float "0"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :parsed [:widget "beztq8" 0.6576189313616071 {:type :slider, :limits [[:float "-50"] [:float "0"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
  :pos [-404 -196]
  }
  "bs06q3tmi67q4sq" 
@@ -43,6 +45,13 @@
  :parsed [:fn "From-dB" [:tuple [:free-var "db"]]]
  :pos [388 -168]
  }
+ "eo4ea7389vlo2t1" 
+{:inputs ["a"]
+ :label "Math:Log10($a)"
+ :outputs [""]
+ :parsed [:fn "Math:Log10" [:tuple [:free-var "a"]]]
+ :pos [241 -14]
+ }
  "gmcunb6iaaxovf" 
 {:inputs ["sig" "threshold" "ratio"]
  :label "Attenuation($sig $threshold $ratio)"
@@ -53,16 +62,16 @@
  }
  "hv06346n1a92e71" 
 {:inputs []
- :label "1 -o- 1000"
+ :label "6 -o- 2000"
  :outputs [""]
- :parsed [:widget "pxjgs" 0.5 {:type :slider, :limits [[:float "1"] [:float "1000"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :parsed [:widget "pxjgs" 1 {:type :slider, :limits [[:float "6"] [:float "2000"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
  :pos [-48 -331]
  }
  "l89rjh5fm3q8cqb" 
 {:inputs []
- :label "1 -o- 100"
+ :label "6 -o- 100"
  :outputs [""]
- :parsed [:widget "-eaf6r9" 0.5 {:type :slider, :limits [[:float "1"] [:float "100"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :parsed [:widget "-eaf6r9" 0.1861903599330357 {:type :slider, :limits [[:float "6"] [:float "100"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
  :pos [101 -331]
  }
  "sh586ajnd60h2yu" 
@@ -78,7 +87,7 @@
 {:inputs []
  :label "-24 .o 24"
  :outputs [""]
- :parsed [:widget "j4c7qn" 0.785 {:type :dial, :skin :circular, :min [:float "-24"], :max [:float "24"]}]
+ :parsed [:widget "j4c7qn" 0.4449999999999999 {:type :dial, :skin :circular, :min [:float "-24"], :max [:float "24"]}]
  :pos [256 -178]
  }
  "tqb2r81bbft58iy" 
@@ -86,7 +95,7 @@
  :label "1 .o 8"
  :name "ratio"
  :outputs [""]
- :parsed [:widget "-yca3f7" 1 {:type :dial, :skin :circular, :min [:float "1"], :max [:float "8"]}]
+ :parsed [:widget "-yca3f7" 0.74 {:type :dial, :skin :circular, :min [:float "1"], :max [:float "8"]}]
  :pos [-200 -196]
  }
  "ttlq0ohiwatp9eg" 
