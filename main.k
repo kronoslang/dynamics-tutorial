@@ -56,20 +56,41 @@ nls8ze754hvnf3jy-0
 }
 
 Attack-Release-Compressor() {
-(nxotuit9ix78b63u-0) = 0.5290475027901785
+(nxotuit9ix78b63u-0) = 0.3290475027901786
 (nhf6dbh2zu5dr4t6-0) = Attenuation(npyjce7lhz95nc8u-0 nxotuit9ix78b63u-0 nketdzb8cye6z4n-0)
 (nihp7hiksa3rdvn-0) = Algorithm:Choose(nsxh4y63fq8i6lyq-0 niua2u94xrbas0eg-0 nmb77s6r4nm7x42h-0)
 (nsxh4y63fq8i6lyq-0) = Control:Edge-(nhf6dbh2zu5dr4t6-0)
 (nyk0p8eztheb44ad-0) = Filter:Lpf6(nhf6dbh2zu5dr4t6-0 nihp7hiksa3rdvn-0)
-(niua2u94xrbas0eg-0) = 0.6219046456473214
-(nmb77s6r4nm7x42h-0) = 0.47904750279017855
+(n6m0gjz2gqot13e9-0) = Filter:Lpf6(nyk0p8eztheb44ad-0 nbfal4xcih9agep0-0)
+(niua2u94xrbas0eg-0) = 0.5933332170758928
+(nmb77s6r4nm7x42h-0) = 0
 (nvb16nu2as4otajy-0) = nbub653mr2e14cy9-0
 (n65d1f8cgjv2a6qi-0) = 0.785
+(nbfal4xcih9agep0-0) = 250
 (nzo432h2m83k72wh-0) = From-dB(n65d1f8cgjv2a6qi-0)
 (npyjce7lhz95nc8u-0) = Test-Drums()
-(nbub653mr2e14cy9-0) = (npyjce7lhz95nc8u-0 * nyk0p8eztheb44ad-0 * nzo432h2m83k72wh-0)
+(nbub653mr2e14cy9-0) = (npyjce7lhz95nc8u-0 * n6m0gjz2gqot13e9-0 * nzo432h2m83k72wh-0)
 (nketdzb8cye6z4n-0) = 1
 nvb16nu2as4otajy-0
+}
+
+
+
+dB-Slew(sig attack release) {
+(nzdkxt6e27u089mq-0) = Neg(n7mhgtrisbvjfv4y-1)
+(n8a47m8bbz7pyt6-0) = z-1(njqv1yng9qgl2rmp-0)
+(n4nmc6ki4ccks4zf-0) = Rate-of(n7mhgtrisbvjfv4y-0)
+(n8ncgoj7jyak4xnf-0) = From-dB(nzdkxt6e27u089mq-0)
+(ng469j15y976uhbg-0) = From-dB(n7mhgtrisbvjfv4y-2)
+(njqv1yng9qgl2rmp-0) = Math:Clamp(n7mhgtrisbvjfv4y-0 nqv7gqqk2pnqr04y-0 nto6dhmf9g9rup39-0)
+(nqv7gqqk2pnqr04y-0) = (n8a47m8bbz7pyt6-0 * n8dwbsuqq8q5jm89-0)
+(nyav0jy1bzk3h9rh-0) = Math:Pow(ng469j15y976uhbg-0 nbhteghafu42hubb-0)
+(nto6dhmf9g9rup39-0) = (n8a47m8bbz7pyt6-0 * nyav0jy1bzk3h9rh-0)
+(n8wml674pug153r8-0) = njqv1yng9qgl2rmp-0
+(nbhteghafu42hubb-0) = (1 / n4nmc6ki4ccks4zf-0)
+(n7mhgtrisbvjfv4y-0 n7mhgtrisbvjfv4y-1 n7mhgtrisbvjfv4y-2) = arg
+(n8dwbsuqq8q5jm89-0) = Math:Pow(n8ncgoj7jyak4xnf-0 nbhteghafu42hubb-0)
+n8wml674pug153r8-0
 }
 
 }

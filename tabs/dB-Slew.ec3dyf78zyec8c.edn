@@ -1,0 +1,121 @@
+{:draft-argument "Gen:Sin(2) 100 6"
+ :identifier "dB-Slew"
+ :identity "ec3dyf78zyec8c"
+ :patch
+{:cables
+{["4nmc6ki4ccks4zf" 0] [:fixed "7mhgtrisbvjfv4y" 0]
+ ["8a47m8bbz7pyt6" 0] [:fixed "jqv1yng9qgl2rmp" 0]
+ ["8dwbsuqq8q5jm89" 0] [:fixed "8ncgoj7jyak4xnf" 0]
+ ["8dwbsuqq8q5jm89" 1] [:fixed "bhteghafu42hubb" 0]
+ ["8ncgoj7jyak4xnf" 0] [:fixed "zdkxt6e27u089mq" 0]
+ ["8wml674pug153r8" 0] [:fixed "jqv1yng9qgl2rmp" 0]
+ ["bhteghafu42hubb" 0] [:fixed "4nmc6ki4ccks4zf" 0]
+ ["g469j15y976uhbg" 0] [:fixed "7mhgtrisbvjfv4y" 2]
+ ["jqv1yng9qgl2rmp" 0] [:fixed "7mhgtrisbvjfv4y" 0]
+ ["jqv1yng9qgl2rmp" 1] [:fixed "qv7gqqk2pnqr04y" 0]
+ ["jqv1yng9qgl2rmp" 2] [:fixed "to6dhmf9g9rup39" 0]
+ ["qv7gqqk2pnqr04y" 0] [:fixed "8a47m8bbz7pyt6" 0]
+ ["qv7gqqk2pnqr04y" 1] [:fixed "8dwbsuqq8q5jm89" 0]
+ ["to6dhmf9g9rup39" 0] [:fixed "8a47m8bbz7pyt6" 0]
+ ["to6dhmf9g9rup39" 1] [:fixed "yav0jy1bzk3h9rh" 0]
+ ["yav0jy1bzk3h9rh" 0] [:fixed "g469j15y976uhbg" 0]
+ ["yav0jy1bzk3h9rh" 1] [:fixed "bhteghafu42hubb" 0]
+ ["zdkxt6e27u089mq" 0] [:fixed "7mhgtrisbvjfv4y" 1]}
+ :nodes
+{"4nmc6ki4ccks4zf" 
+{:inputs ["sig"]
+ :label "Rate-of($sig)"
+ :outputs [""]
+ :parsed [:fn "Rate-of" [:tuple [:free-var "sig"]]]
+ :pos [-368 -146]
+ }
+ "7mhgtrisbvjfv4y" 
+{:inputs []
+ :label "(sig attack release) = arg"
+ :outputs ["sig" "attack" "release"]
+ :parsed "arg"
+ :pos [-496 -329]
+ }
+ "8a47m8bbz7pyt6" 
+{:cable-midpoints 
+{0 [-118 85]}
+ :inputs ["sig~"]
+ :label "z-1($sig~)"
+ :outputs [""]
+ :parsed [:fn "z-1" [:tuple [:free-var "sig~"]]]
+ :pos [-242 -55]
+ }
+ "8dwbsuqq8q5jm89" 
+{:flip-y true
+ :inputs ["a" "b"]
+ :label "Math:Pow($a $b)"
+ :outputs [""]
+ :parsed [:fn "Math:Pow" [:tuple [:free-var "a"] [:free-var "b"]]]
+ :pos [-91 -267]
+ }
+ "8ncgoj7jyak4xnf" 
+{:inputs ["db"]
+ :label "From-dB($db)"
+ :outputs [""]
+ :parsed [:fn "From-dB" [:tuple [:free-var "db"]]]
+ :pos [-231 -266]
+ }
+ "8wml674pug153r8" 
+{:inputs ["out"]
+ :label "$out"
+ :outputs [""]
+ :parsed [:free-var "out"]
+ :pos [240 -76]
+ }
+ "bhteghafu42hubb" 
+{:inputs ["b"]
+ :label "1 /"
+ :outputs [""]
+ :parsed [:infix [:float "1"] "/" [:free-var "b"]]
+ :pos [-217 -148]
+ }
+ "g469j15y976uhbg" 
+{:inputs ["db"]
+ :label "From-dB($db)"
+ :outputs [""]
+ :parsed [:fn "From-dB" [:tuple [:free-var "db"]]]
+ :pos [-277 -352]
+ }
+ "jqv1yng9qgl2rmp" 
+{:inputs ["x" "low-bound" "high-bound"]
+ :label "Math:Clamp($x $low-bound $high-bound)"
+ :outputs [""]
+ :parsed [:fn "Math:Clamp" [:tuple [:free-var "x"] [:free-var "low-bound"] [:free-var "high-bound"]]]
+ :pos [115 -34]
+ :selected true}
+ "qv7gqqk2pnqr04y" 
+{:inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [-13 -162]
+ }
+ "to6dhmf9g9rup39" 
+{:inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [44 -235]
+ }
+ "yav0jy1bzk3h9rh" 
+{:flip-y true
+ :inputs ["a" "b"]
+ :label "Math:Pow($a $b)"
+ :outputs [""]
+ :parsed [:fn "Math:Pow" [:tuple [:free-var "a"] [:free-var "b"]]]
+ :pos [-102 -352]
+ }
+ "zdkxt6e27u089mq" 
+{:inputs ["a"]
+ :label "Neg($a)"
+ :outputs [""]
+ :parsed [:fn "Neg" [:tuple [:free-var "a"]]]
+ :pos [-362 -265]
+ }}
+ :scale 1
+ :scroll [0 0]}}

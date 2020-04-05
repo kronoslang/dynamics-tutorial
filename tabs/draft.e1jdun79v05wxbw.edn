@@ -1,0 +1,98 @@
+{
+ :identity "e1jdun79v05wxbw"
+ :patch
+{:cables
+{["7xq5zbitvoledge" 0] [:fixed "gmcunb6iaaxovf" 0]
+ ["7xq5zbitvoledge" 1] [:fixed "hv06346n1a92e71" 0]
+ ["7xq5zbitvoledge" 2] [:fixed "l89rjh5fm3q8cqb" 0]
+ ["bs06q3tmi67q4sq" 0] [:fixed "ttlq0ohiwatp9eg" 0]
+ ["bs06q3tmi67q4sq" 2] [:fixed "e4z2uau96ybnkz7" 0]
+ ["e4z2uau96ybnkz7" 0] [:fixed "sku1e1r55nwj5be" 0]
+ ["gmcunb6iaaxovf" 0] [:fixed "ttlq0ohiwatp9eg" 0]
+ ["gmcunb6iaaxovf" 1] [:fixed "b1193sgogopnf41" 0]
+ ["gmcunb6iaaxovf" 2] [:fixed "tqb2r81bbft58iy" 0]
+ ["sh586ajnd60h2yu" 0] [:fixed "bs06q3tmi67q4sq" 0]}
+ :nodes
+{"7xq5zbitvoledge" 
+{:inputs ["sig" "attack" "release"]
+ :label "dB-Slew($sig $attack $release)"
+ :outputs [""]
+ :parsed [:fn "dB-Slew" [:tuple [:free-var "sig"] [:free-var "attack"] [:free-var "release"]]]
+ :pos [70 66]
+ }
+ "b1193sgogopnf41" 
+{:inputs []
+ :label "-60 -o- 0"
+ :name "threshold"
+ :outputs [""]
+ :parsed [:widget "beztq8" 0.5290475027901785 {:type :slider, :limits [[:float "-60"] [:float "0"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :pos [-404 -196]
+ }
+ "bs06q3tmi67q4sq" 
+{:ephemeral-inputs #{"more"}
+ :inputs ["a" "b" "more" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more..."]]
+ :pos [327 268]
+ }
+ "e4z2uau96ybnkz7" 
+{:inputs ["db"]
+ :label "From-dB($db)"
+ :outputs [""]
+ :parsed [:fn "From-dB" [:tuple [:free-var "db"]]]
+ :pos [388 -168]
+ }
+ "gmcunb6iaaxovf" 
+{:inputs ["sig" "threshold" "ratio"]
+ :label "Attenuation($sig $threshold $ratio)"
+ :name "find gain target"
+ :outputs [""]
+ :parsed [:fn "Attenuation" [:tuple [:free-var "sig"] [:free-var "threshold"] [:free-var "ratio"]]]
+ :pos [-153 89]
+ }
+ "hv06346n1a92e71" 
+{:inputs []
+ :label "1 -o- 1000"
+ :outputs [""]
+ :parsed [:widget "pxjgs" 0.5 {:type :slider, :limits [[:float "1"] [:float "1000"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :pos [-48 -331]
+ }
+ "l89rjh5fm3q8cqb" 
+{:inputs []
+ :label "1 -o- 100"
+ :outputs [""]
+ :parsed [:widget "-eaf6r9" 0.5 {:type :slider, :limits [[:float "1"] [:float "100"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :pos [101 -331]
+ }
+ "sh586ajnd60h2yu" 
+{:cable-midpoints 
+{0 [-159 129]}
+ :inputs ["sig"]
+ :label "o))"
+ :outputs ["thru"]
+ :parsed [:playback [:free-var "sig"]]
+ :pos [-19 323]
+ }
+ "sku1e1r55nwj5be" 
+{:inputs []
+ :label "-24 .o 24"
+ :outputs [""]
+ :parsed [:widget "j4c7qn" 0.785 {:type :dial, :skin :circular, :min [:float "-24"], :max [:float "24"]}]
+ :pos [256 -178]
+ }
+ "tqb2r81bbft58iy" 
+{:inputs []
+ :label "1 .o 8"
+ :name "ratio"
+ :outputs [""]
+ :parsed [:widget "-yca3f7" 1 {:type :dial, :skin :circular, :min [:float "1"], :max [:float "8"]}]
+ :pos [-200 -196]
+ }
+ "ttlq0ohiwatp9eg" 
+{:inputs []
+ :label "Test-Drums()"
+ :outputs [""]
+ :parsed [:fn "Test-Drums" [:tuple]]
+ :pos [-409 219]
+ }}}}
