@@ -1,0 +1,120 @@
+{:identifier "Attack-Release-Compressor"
+ :identity "akwctt1u200u8dr"
+ :patch
+{:cables
+{["bub653mr2e14cy9" 0] [:fixed "pyjce7lhz95nc8u" 0]
+ ["bub653mr2e14cy9" 1] [:fixed "yk0p8eztheb44ad" 0]
+ ["bub653mr2e14cy9" 2] [:fixed "zo432h2m83k72wh" 0]
+ ["hf6dbh2zu5dr4t6" 0] [:fixed "pyjce7lhz95nc8u" 0]
+ ["hf6dbh2zu5dr4t6" 1] [:fixed "xotuit9ix78b63u" 0]
+ ["hf6dbh2zu5dr4t6" 2] [:fixed "ketdzb8cye6z4n" 0]
+ ["ihp7hiksa3rdvn" 0] [:fixed "sxh4y63fq8i6lyq" 0]
+ ["ihp7hiksa3rdvn" 1] [:fixed "iua2u94xrbas0eg" 0]
+ ["ihp7hiksa3rdvn" 2] [:fixed "mb77s6r4nm7x42h" 0]
+ ["sxh4y63fq8i6lyq" 0] [:fixed "hf6dbh2zu5dr4t6" 0]
+ ["vb16nu2as4otajy" 0] [:fixed "bub653mr2e14cy9" 0]
+ ["yk0p8eztheb44ad" 0] [:fixed "hf6dbh2zu5dr4t6" 0]
+ ["yk0p8eztheb44ad" 1] [:fixed "ihp7hiksa3rdvn" 0]
+ ["zo432h2m83k72wh" 0] [:fixed "65d1f8cgjv2a6qi" 0]}
+ :nodes
+{"65d1f8cgjv2a6qi" 
+{:inputs []
+ :label "-24 .o 24"
+ :outputs [""]
+ :parsed [:widget "-nbf4ni" 0.785 {:type :dial, :skin :circular, :min [:float "-24"], :max [:float "24"]}]
+ :pos [215 -204]
+ }
+ "bub653mr2e14cy9" 
+{:ephemeral-inputs #{"more"}
+ :inputs ["a" "b" "more" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more..."]]
+ :pos [246 268]
+ }
+ "hf6dbh2zu5dr4t6" 
+{:inputs ["sig" "threshold" "ratio"]
+ :label "Attenuation($sig $threshold $ratio)"
+ :name "find gain target"
+ :outputs [""]
+ :parsed [:fn "Attenuation" [:tuple [:free-var "sig"] [:free-var "threshold"] [:free-var "ratio"]]]
+ :pos [-163 79]
+ }
+ "ihp7hiksa3rdvn" 
+{:inputs ["truth" "when-true" "when-false"]
+ :label "Algorithm:Choose($truth $when-true $when-false)"
+ :outputs [""]
+ :parsed [:fn "Algorithm:Choose" [:tuple [:free-var "truth"] [:free-var "when-true"] [:free-var "when-false"]]]
+ :pos [158 14]
+ }
+ "iua2u94xrbas0eg" 
+{:inputs []
+ :label "5 -x- 500"
+ :name "attack"
+ :outputs [""]
+ :parsed [:widget "hzx4h8" 0.6219046456473214 {:type :slider, :limits [[:float "5"] [:float "500"]], :render [:limits], :size 3, :orientation :vertical, :curve :exponential}]
+ :pos [-55 -337]
+ }
+ "ketdzb8cye6z4n" 
+{:inputs []
+ :label "1 .o 8"
+ :name "ratio"
+ :outputs [""]
+ :parsed [:widget "8ehvys" 1 {:type :dial, :skin :circular, :min [:float "1"], :max [:float "8"]}]
+ :pos [-210 -206]
+ }
+ "mb77s6r4nm7x42h" 
+{:inputs []
+ :label "0.5 -x- 250"
+ :name "release"
+ :outputs [""]
+ :parsed [:widget "keuasl" 0.47904750279017855 {:type :slider, :limits [[:float "0.5"] [:float "250"]], :render [:limits], :size 3, :orientation :vertical, :curve :exponential}]
+ :pos [43 -337]
+ }
+ "pyjce7lhz95nc8u" 
+{:inputs []
+ :label "Test-Drums()"
+ :outputs [""]
+ :parsed [:fn "Test-Drums" [:tuple]]
+ :pos [-419 209]
+ }
+ "sxh4y63fq8i6lyq" 
+{:inputs ["sig"]
+ :label "Control:Edge-($sig)"
+ :outputs [""]
+ :parsed [:fn "Control:Edge-" [:tuple [:free-var "sig"]]]
+ :pos [5 28]
+ }
+ "vb16nu2as4otajy" 
+{:cable-midpoints 
+{0 [-159 129]}
+ :inputs ["sig"]
+ :label "o))"
+ :outputs ["thru"]
+ :parsed [:playback [:free-var "sig"]]
+ :pos [-29 313]
+ }
+ "xotuit9ix78b63u" 
+{:inputs []
+ :label "-60 -o- 0"
+ :name "threshold"
+ :outputs [""]
+ :parsed [:widget "-ge716e" 0.5290475027901785 {:type :slider, :limits [[:float "-60"] [:float "0"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :pos [-414 -206]
+ }
+ "yk0p8eztheb44ad" 
+{:inputs ["sig" "cutoff"]
+ :label "Filter:Lpf6($sig $cutoff)"
+ :outputs [""]
+ :parsed [:fn "Filter:Lpf6" [:tuple [:free-var "sig"] [:free-var "cutoff"]]]
+ :pos [223 150]
+ }
+ "zo432h2m83k72wh" 
+{:inputs ["db"]
+ :label "From-dB($db)"
+ :outputs [""]
+ :parsed [:fn "From-dB" [:tuple [:free-var "db"]]]
+ :pos [380 -109]
+ }}
+ :scale 1
+ :scroll [0 0]}}

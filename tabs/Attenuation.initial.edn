@@ -1,0 +1,83 @@
+{:documentation "Compute target attenuation for a compressor with `threshold` in decibels and `ratio` of compression above that."
+ :draft-argument "Gen:Sin(1) -12 4"
+ :identifier "Attenuation"
+ :identity "initial"
+ :patch
+{:cables
+{["2j26d4aj9g61ju1" 0] [:fixed "je5482cvqp1gt7v" 0]
+ ["2y3ehl7r9byde53" 0] [:fixed "93p23qamoh51jtf" 0]
+ ["93p23qamoh51jtf" 0] [:fixed "2bpq6svrjgg3znp" 0]
+ ["93p23qamoh51jtf" 1] [:fixed "hyg12117s52k40" 0]
+ ["9liu2nde1mmbdmy" 0] [:fixed "2bpq6svrjgg3znp" 1]
+ ["elgatoh357b7rw3" 0] [:fixed "2y3ehl7r9byde53" 0]
+ ["fa0a7t9s170x6x5" 0] [:fixed "elgatoh357b7rw3" 0]
+ ["fa0a7t9s170x6x5" 1] [:fixed "2j26d4aj9g61ju1" 0]
+ ["hyg12117s52k40" 0] [:fixed "9liu2nde1mmbdmy" 0]
+ ["je5482cvqp1gt7v" 0] [:fixed "2bpq6svrjgg3znp" 2]}
+ :nodes
+{"2bpq6svrjgg3znp" 
+{:inputs []
+ :label "(sig threshold ratio) = arg"
+ :outputs ["sig" "threshold" "ratio"]
+ :parsed "arg"
+ :pos [-384 -81]
+ }
+ "2j26d4aj9g61ju1" 
+{:inputs ["a"]
+ :label "- 1"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "-" [:float "1"]]
+ :pos [178 14]
+ }
+ "2y3ehl7r9byde53" 
+{:inputs ["a"]
+ :label "Abs($a)"
+ :outputs [""]
+ :parsed [:fn "Abs" [:tuple [:free-var "a"]]]
+ :pos [78 -90]
+ }
+ "93p23qamoh51jtf" 
+{:inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [-17 -90]
+ }
+ "9liu2nde1mmbdmy" 
+{:inputs ["db"]
+ :label "From-dB($db)"
+ :outputs [""]
+ :parsed [:fn "From-dB" [:tuple [:free-var "db"]]]
+ :pos [-251 -170]
+ }
+ "elgatoh357b7rw3" 
+{:inputs ["b"]
+ :label "Max(1 $b)"
+ :outputs [""]
+ :parsed [:fn "Max" [:tuple [:float "1"] [:free-var "b"]]]
+ :pos [223 -90]
+ }
+ "fa0a7t9s170x6x5" 
+{:flip-y true
+ :inputs ["a" "b"]
+ :label "Math:Pow($a $b)"
+ :outputs [""]
+ :parsed [:fn "Math:Pow" [:tuple [:free-var "a"] [:free-var "b"]]]
+ :pos [398 -66]
+ }
+ "hyg12117s52k40" 
+{:inputs ["b"]
+ :label "1 /"
+ :outputs [""]
+ :parsed [:infix [:float "1"] "/" [:free-var "b"]]
+ :pos [-104 -170]
+ }
+ "je5482cvqp1gt7v" 
+{:inputs ["b"]
+ :label "1 /"
+ :outputs [""]
+ :parsed [:infix [:float "1"] "/" [:free-var "b"]]
+ :pos [-122 14]
+ }}
+ :scale 1
+ :scroll [0 0]}}

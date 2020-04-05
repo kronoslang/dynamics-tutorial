@@ -1,0 +1,8 @@
+{
+  "dependencies": {},
+  "description": "Demonstrates building compressors from scratch!",
+  "license": "https://www.eclipse.org/legal/epl-v10.html",
+  "version": "0.1",
+  "name": "dynamics-tutorial",
+  "url": "https://kronoslang.io"
+}

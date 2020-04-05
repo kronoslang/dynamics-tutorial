@@ -1,0 +1,27 @@
+{:documentation "Convert 'dB' from decibel scale to linear gain coefficient.\n"
+ :draft-argument "-6"
+ :identifier "From-dB"
+ :identity "niz8xti8x7dks6q"
+ :patch
+{:cables
+{["1kr6uaw7cmbb3dt" 0] [:fixed "mq5wpf10q1ls2rc" 0]
+ ["te4zfibrqjcug78" 0] [:fixed "1kr6uaw7cmbb3dt" 0]}
+ :nodes
+{"1kr6uaw7cmbb3dt" 
+{:inputs ["a"]
+ :label "/ 20"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "/" [:float "20"]]
+ :pos [-66 -113]}
+ "mq5wpf10q1ls2rc" 
+{:inputs []
+ :label "db = arg"
+ :outputs ["db"]
+ :parsed "arg"
+ :pos [-190 -113]}
+ "te4zfibrqjcug78" 
+{:inputs ["b"]
+ :label "Math:Pow(10 $b)"
+ :outputs [""]
+ :parsed [:fn "Math:Pow" [:tuple [:float "10"] [:free-var "b"]]]
+ :pos [100 -113]}}}}

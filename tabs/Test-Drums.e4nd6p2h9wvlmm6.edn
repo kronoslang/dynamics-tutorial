@@ -1,0 +1,54 @@
+{:identifier "Test-Drums"
+ :identity "e4nd6p2h9wvlmm6"
+ :patch
+{:cables
+{["8f266f7rfp9x843" 0] [:fixed "eiwagxlbio3lbjf" 0]
+ ["eiwagxlbio3lbjf" 0] [:fixed "bdicwh6o25823el" 2]
+ ["eiwagxlbio3lbjf" 1] [:fixed "j6cegl7sqqt3p" 0]
+ ["j6cegl7sqqt3p" 0] [:fixed "yabbsl42bh07c6p" 0]
+ ["yabbsl42bh07c6p" 0] [:fixed "b6xcgl05paicrdv" 0]}
+ :nodes
+{"8f266f7rfp9x843" 
+{:inputs ["sig"]
+ :label "o))"
+ :outputs ["thru"]
+ :parsed [:playback [:free-var "sig"]]
+ :pos [303 -21]}
+ "b6xcgl05paicrdv" 
+{:inputs []
+ :label "1"
+ :outputs [""]
+ :parsed [:float "1"]
+ :pos [-316 -151]
+ }
+ "bdicwh6o25823el" 
+{:inputs []
+ :label "drums_dry.wav"
+ :outputs ["sample-rate" "num-frames" "sampler-fn"]
+ :parsed [:asset "drums_dry.wav"]
+ :pos [-200 -66]
+ }
+ "eiwagxlbio3lbjf" 
+{:ephemeral-inputs #{"arg"}
+ :inputs ["fn" "arg" "arg..."]
+ :label "Eval($fn $arg...)"
+ :outputs [""]
+ :parsed [:fn "Eval" [:tuple [:free-var "fn"] [:free-var "arg"] [:free-var "arg..."]]]
+ :pos [199 33]
+ }
+ "j6cegl7sqqt3p" 
+{:inputs ["sig"]
+ :label "Filter:Integrate($sig 1)"
+ :outputs [""]
+ :parsed [:fn "Filter:Integrate" [:tuple [:free-var "sig"] [:float "1"]]]
+ :pos [31 -152]
+ }
+ "yabbsl42bh07c6p" 
+{:inputs ["sig"]
+ :label "Gen:Signal($sig)"
+ :outputs [""]
+ :parsed [:fn "Gen:Signal" [:tuple [:free-var "sig"]]]
+ :pos [-206 -151]
+ }}
+ :scale 1
+ :scroll [0 0]}}

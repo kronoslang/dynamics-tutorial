@@ -1,0 +1,14 @@
+{:assets 
+{"assets/drums_dry.wav" :bundled}
+ :current-tab 0
+ :file "compressor.veneer"
+ :manifest 
+{:dependencies 
+{}
+ :description "Demonstrates building compressors from scratch!"
+ :license "https://www.eclipse.org/legal/epl-v10.html"
+ :name "dynamics-tutorial"
+ :url "https://kronoslang.io"
+ :version "0.1"}
+ :name "dynamics-tutorial"
+ :tabs ("tabs/Attenuation.initial.edn" "tabs/From-dB.niz8xti8x7dks6q.edn" "tabs/Test-Drums.e4nd6p2h9wvlmm6.edn" "tabs/Simple-Compressor.3nse16v9u7um7uz.edn" "tabs/Attack-Release-Compressor.akwctt1u200u8dr.edn")}
