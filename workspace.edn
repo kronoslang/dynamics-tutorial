@@ -1,6 +1,6 @@
 {:assets 
 {"assets/drums_dry.wav" :bundled}
- :current-tab 0
+ :current-tab 4
  
  :manifest 
 {:dependencies 

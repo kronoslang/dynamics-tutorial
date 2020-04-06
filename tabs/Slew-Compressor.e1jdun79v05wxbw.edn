@@ -53,7 +53,7 @@
  :label "; The lag circuit is implemented as a decibel slew limiter on [this tab](#6)"
  :outputs []
  :parsed [:comment "The lag circuit is implemented as a decibel slew limiter on [this tab](#6)"]
- :pos [-165 285]
+ :pos [-283 301]
  }
  "e4z2uau96ybnkz7" 
 {:inputs ["db"]
@@ -76,7 +76,7 @@
  :outputs []
  :parsed [:comment "### Next up... ###\n\n\nAdd some nonlinearity to explore [\"analog\" sounds!](#4)"]
  :pos [424 -88]
- :selected true}
+ }
  "hv06346n1a92e71" 
 {:color 3
  :inputs []
@@ -100,6 +100,7 @@
 {0 [-75 114]}
  :inputs ["sig"]
  :label "o))"
+ :name "play here!"
  :outputs ["thru"]
  :parsed [:playback [:free-var "sig"]]
  :pos [125 296]

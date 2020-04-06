@@ -47,6 +47,7 @@
 {0 [-179 162]}
  :inputs ["sig"]
  :label "o))"
+ :name "play here!"
  :outputs ["thru"]
  :parsed [:playback [:free-var "sig"]]
  :pos [-85 403]
@@ -72,6 +73,7 @@
 {:color 4
  :inputs ["sig"]
  :label "Control:Edge-($sig)"
+ :name "going down?"
  :outputs [""]
  :parsed [:fn "Control:Edge-" [:tuple [:free-var "sig"]]]
  :pos [-82 142]
@@ -116,8 +118,8 @@
  :label ";### Next up... ###\n\n\nSome people prefer to specify attack and release as [decibel slews](#3)"
  :outputs []
  :parsed [:comment "### Next up... ###\n\n\nSome people prefer to specify attack and release as [decibel slews](#3)"]
- :pos [395 -70]
- :selected true}
+ :pos [373 -115]
+ }
  "p1nrdpppv7qw335" 
 {:inputs ["sig" "threshold" "ratio"]
  :label "Attenuation($sig $threshold $ratio)"
@@ -137,6 +139,7 @@
 {:color 4
  :inputs ["truth" "when-true" "when-false"]
  :label "Algorithm:Choose($truth $when-true $when-false)"
+ :name "pick attack or release"
  :outputs [""]
  :parsed [:fn "Algorithm:Choose" [:tuple [:free-var "truth"] [:free-var "when-true"] [:free-var "when-false"]]]
  :pos [40 142]

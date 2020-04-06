@@ -34,14 +34,14 @@
  :name "attack"
  :outputs [""]
  :parsed [:widget "-pflx9x" 0.21000000000000002 {:type :dial, :skin :circular, :min [:float "6"], :max [:float "500"]}]
- :pos [-55 73]
+ :pos [-89 97]
  }
  "3ft9kwx20trjc97" 
 {:inputs []
  :label ";## Next, let's compress! ##\n\nYou can find several compressor implementations on the tabs of this workspace:\n\n\n- [Basic](#1)\n- [Attack and Release](#2)\n- [Decibel Slew](#3)\n- [\"Analog\"](#4)"
  :outputs []
  :parsed [:comment "## Next, let's compress! ##\n\nYou can find several compressor implementations on the tabs of this workspace:\n\n\n- [Basic](#1)\n- [Attack and Release](#2)\n- [Decibel Slew](#3)\n- [\"Analog\"](#4)"]
- :pos [-465 247]
+ :pos [-450 261]
  :selected true}
  "3ggdmd5nx6f5bt0" 
 {:color 2
@@ -50,7 +50,7 @@
  :name "play here!"
  :outputs ["thru"]
  :parsed [:playback [:free-var "sig"]]
- :pos [341 -40]
+ :pos [327 -16]
  }
  "3jp8rjjk2jgc3oo" 
 {:color 3
@@ -82,15 +82,15 @@
  :name "release"
  :outputs [""]
  :parsed [:widget "q4hke7" 0.24 {:type :dial, :skin :circular, :min [:float "20"], :max [:float "100"]}]
- :pos [45 73]
+ :pos [11 97]
  }
  "922b79f2m2q3rq4" 
 {:color 2
  :inputs []
- :label "; Compressors automatically reduce audio levels when the signal crosses a *compression threshold*. \n\nThis example demonstrates the shape of the compressor's \"knee\".\n\n\nThe response is determined by the attenuator circuit on [this tab](#5). You can also right-click on `Attenuation` and select *goto*."
+ :label "; Compressors automatically reduce audio levels when the signal crosses a *compression threshold*. \n\nThis example demonstrates the shape of the compressor's \"knee\". You can control the shape of the knee with the sliders on the left.\n\nThe response is determined by the attenuator circuit on [this tab](#5). You can also right-click on `Attenuation` and select *goto*."
  :outputs []
- :parsed [:comment "Compressors automatically reduce audio levels when the signal crosses a *compression threshold*. \n\nThis example demonstrates the shape of the compressor's \"knee\".\n\n\nThe response is determined by the attenuator circuit on [this tab](#5). You can also right-click on `Attenuation` and select *goto*."]
- :pos [410 -343]
+ :parsed [:comment "Compressors automatically reduce audio levels when the signal crosses a *compression threshold*. \n\nThis example demonstrates the shape of the compressor's \"knee\". You can control the shape of the knee with the sliders on the left.\n\nThe response is determined by the attenuator circuit on [this tab](#5). You can also right-click on `Attenuation` and select *goto*."]
+ :pos [399 -387]
  }
  "9f15lx6szv3claq" 
 {:color 3
@@ -118,17 +118,17 @@
  "c8zh4h01kmi38w0" 
 {:color 4
  :inputs []
- :label "; Time constants are the other important piece of dynamics processing.\n\n\nThis example demonstrates how a *lag circuit* slows down the change in attenuation."
+ :label "; Time constants are the other important piece of dynamics processing.\n\n\nThis example demonstrates how a *lag circuit* slows down the change in attenuation.\n\n\nYou can control the rate of onset and offset of attenuation with the dials on the left."
  :outputs []
- :parsed [:comment "Time constants are the other important piece of dynamics processing.\n\n\nThis example demonstrates how a *lag circuit* slows down the change in attenuation."]
- :pos [410 79]
+ :parsed [:comment "Time constants are the other important piece of dynamics processing.\n\n\nThis example demonstrates how a *lag circuit* slows down the change in attenuation.\n\n\nYou can control the rate of onset and offset of attenuation with the dials on the left."]
+ :pos [400 68]
  }
  "cdj3cfrkd34l565" 
 {:inputs []
  :label ";# Welcome to the Compressor Tutorial! #\n\n\nThis workspace demonstrates several kinds of digital compressors built from first principles."
  :outputs []
  :parsed [:comment "# Welcome to the Compressor Tutorial! #\n\n\nThis workspace demonstrates several kinds of digital compressors built from first principles."]
- :pos [-373 -374]
+ :pos [-444 -343]
  }
  "dzvxys9kxqljdt5" 
 {:inputs []
@@ -157,7 +157,7 @@
  :label "Math:Log($a)"
  :outputs [""]
  :parsed [:fn "Math:Log" [:tuple [:free-var "a"]]]
- :pos [245 279]
+ :pos [230 349]
  }
  "q51345cetjsmz56" 
 {:inputs ["sig" "threshold" "ratio"]
@@ -187,7 +187,7 @@
  :name "play here!"
  :outputs ["thru"]
  :parsed [:playback [:free-var "sig"]]
- :pos [341 279]
+ :pos [325 349]
  }}
  :scale 1
  :scroll [0 0]}}
