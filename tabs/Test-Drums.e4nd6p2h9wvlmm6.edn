@@ -13,50 +13,43 @@
  :label "; # Test Signal #\n\n\nThis circuit produces a test signal by playing back a sampled drum loop."
  :outputs []
  :parsed [:comment "# Test Signal #\n\n\nThis circuit produces a test signal by playing back a sampled drum loop."]
- :pos [-126 -208]
- }
+ :pos [-126 -208]}
  "8f266f7rfp9x843" 
 {:inputs ["sig"]
  :label "o))"
  :outputs ["thru"]
  :parsed [:playback [:free-var "sig"]]
- :pos [335 91]
- }
+ :pos [335 91]}
  "b6xcgl05paicrdv" 
 {:inputs []
  :label "1"
  :outputs [""]
  :parsed [:float "1"]
- :pos [-284 -39]
- }
+ :pos [-284 -39]}
  "bdicwh6o25823el" 
 {:inputs []
  :label "drums_dry.wav"
  :outputs ["sample-rate" "num-frames" "sampler-fn"]
  :parsed [:asset "drums_dry.wav"]
- :pos [-168 46]
- }
+ :pos [-168 46]}
  "eiwagxlbio3lbjf" 
 {:ephemeral-inputs #{"arg"}
  :inputs ["fn" "arg" "arg..."]
  :label "Eval($fn $arg...)"
  :outputs [""]
  :parsed [:fn "Eval" [:tuple [:free-var "fn"] [:free-var "arg"] [:free-var "arg..."]]]
- :pos [231 145]
- }
+ :pos [231 145]}
  "j6cegl7sqqt3p" 
 {:inputs ["sig"]
  :label "Filter:Integrate($sig 1)"
  :outputs [""]
  :parsed [:fn "Filter:Integrate" [:tuple [:free-var "sig"] [:float "1"]]]
- :pos [63 -40]
- }
+ :pos [63 -40]}
  "yabbsl42bh07c6p" 
 {:inputs ["sig"]
  :label "Gen:Signal($sig)"
  :outputs [""]
  :parsed [:fn "Gen:Signal" [:tuple [:free-var "sig"]]]
- :pos [-174 -39]
- }}
+ :pos [-174 -39]}}
  :scale 1
  :scroll [0 0]}}

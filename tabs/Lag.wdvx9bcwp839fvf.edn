@@ -21,16 +21,14 @@
  :label "1 /"
  :outputs [""]
  :parsed [:infix [:float "1"] "/" [:free-var "b"]]
- :pos [-81 33]
- }
+ :pos [-81 33]}
  "2ffi7eeqbu0xccn" 
 {:color 3
  :inputs []
  :label "; We compute per-sample rate of approach (lag coefficient) by translating `lag` from seconds to samples (N), and taking the N:th root of 0.03 (the relative error of 3% permitted after `lag` seconds)."
  :outputs []
  :parsed [:comment "We compute per-sample rate of approach (lag coefficient) by translating `lag` from seconds to samples (N), and taking the N:th root of 0.03 (the relative error of 3% permitted after `lag` seconds)."]
- :pos [-192 143]
- }
+ :pos [-192 143]}
  "46jln4bd6mrx7i0" 
 {:cable-midpoints 
 {0 [-106 72]}
@@ -39,8 +37,7 @@
  :label "z-1($sig~)"
  :outputs [""]
  :parsed [:fn "z-1" [:tuple [:free-var "sig~"]]]
- :pos [74 -55]
- }
+ :pos [74 -55]}
  "4guc51ebvdgnc7n" 
 {:cable-midpoints 
 {1 [231 51]}
@@ -49,23 +46,20 @@
  :label "Math:Mix($mix $a $b)"
  :outputs [""]
  :parsed [:fn "Math:Mix" [:tuple [:free-var "mix"] [:free-var "a"] [:free-var "b"]]]
- :pos [183 90]
- }
+ :pos [183 90]}
  "5u1eia7mrlls2pz" 
 {:color 3
  :inputs []
  :label "0.03"
  :outputs [""]
  :parsed [:float "0.03"]
- :pos [-81 90]
- }
+ :pos [-81 90]}
  "8o6bl46ta334fvd" 
 {:inputs []
  :label ";# Lag Circuit #\n\n\nThis circuit slows the incoming signal down so that  the output tracks 97% towards input in `lag` seconds."
  :outputs []
  :parsed [:comment "# Lag Circuit #\n\n\nThis circuit slows the incoming signal down so that  the output tracks 97% towards input in `lag` seconds."]
- :pos [17 -314]
- }
+ :pos [17 -314]}
  "8pln4f9pwar3smh" 
 {:cable-midpoints 
 {1 [18 51]}
@@ -74,8 +68,7 @@
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [-163 33]
- }
+ :pos [-163 33]}
  "8vocxm6x1nhv0a8" 
 {:cable-midpoints 
 {}
@@ -84,24 +77,21 @@
  :label "Rate-of($sig)"
  :outputs [""]
  :parsed [:fn "Rate-of" [:tuple [:free-var "sig"]]]
- :pos [-197 -117]
- }
+ :pos [-197 -117]}
  "a5ybmn5ie80pddl" 
 {:color 3
  :inputs ["a" "b"]
  :label "Math:Pow($a $b)"
  :outputs [""]
  :parsed [:fn "Math:Pow" [:tuple [:free-var "a"] [:free-var "b"]]]
- :pos [62 90]
- }
+ :pos [62 90]}
  "gir3fn58soq6ff8" 
 {:color 2
  :inputs []
  :label "; The signal is computed by mixing our previous output with the new input according to the lag coefficient"
  :outputs []
  :parsed [:comment "The signal is computed by mixing our previous output with the new input according to the lag coefficient"]
- :pos [353 -56]
- }
+ :pos [353 -56]}
  "vc8uu0zno3g1i8q" 
 {:cable-midpoints 
 {}
@@ -110,14 +100,12 @@
  :label "$out"
  :outputs [""]
  :parsed [:free-var "out"]
- :pos [301 90]
- }
+ :pos [301 90]}
  "znj1vwhzi2tf3ti" 
 {:inputs []
  :label "(sig lag) = arg"
  :outputs ["sig" "lag"]
  :parsed "arg"
- :pos [-339 -56]
- }}
+ :pos [-339 -56]}}
  :scale 1
  :scroll [0 0]}}

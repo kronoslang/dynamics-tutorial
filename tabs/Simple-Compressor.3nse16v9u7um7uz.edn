@@ -21,6 +21,13 @@
  :parsed [:fn "Lag" [:tuple [:free-var "sig"] [:free-var "lag"]]]
  :pos [177 181]
  }
+ "2mb3pa782n3i62t" 
+{:inputs []
+ :label ";### Next up.... ###\n\n\nCheck out how to add [attack and release!](#2)"
+ :outputs []
+ :parsed [:comment "### Next up.... ###\n\n\nCheck out how to add [attack and release!](#2)"]
+ :pos [-264 372]
+ :selected true}
  "3klnz203x9fs42u" 
 {:ephemeral-inputs #{"more"}
  :inputs ["a" "b" "more" "more..."]
@@ -58,7 +65,7 @@
  :label "-24 .o 24"
  :name "makeup gain"
  :outputs [""]
- :parsed [:widget "qsd1dh" 0.665 {:type :dial, :skin :circular, :min [:float "-24"], :max [:float "24"]}]
+ :parsed [:widget "sqrves" 0.665 {:type :dial, :skin :circular, :min [:float "-24"], :max [:float "24"]}]
  :pos [206 -133]
  }
  "ls8ze754hvnf3jy" 
@@ -77,7 +84,7 @@
  :label "-60 -o- 0"
  :name "threshold"
  :outputs [""]
- :parsed [:widget "-5su78j" 0.1861903599330357 {:type :slider, :limits [[:float "-60"] [:float "0"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :parsed [:widget "uni72b" 0.1861903599330357 {:type :slider, :limits [[:float "-60"] [:float "0"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
  :pos [-281 -133]
  }
  "q8prjlc1b7l2i6q" 
@@ -94,7 +101,7 @@
  :label "0.01 -x- 2.5"
  :name "lag time"
  :outputs [""]
- :parsed [:widget "-1fopln" 0.15761893136160715 {:type :slider, :limits [[:float "0.01"] [:float "2.5"]], :render [:limits], :size 3, :orientation :vertical, :curve :exponential}]
+ :parsed [:widget "-rv09as" 0.15761893136160715 {:type :slider, :limits [[:float "0.01"] [:float "2.5"]], :render [:limits], :size 3, :orientation :vertical, :curve :exponential}]
  :pos [91 -133]
  }
  "yw9qsy1a948rsq" 
@@ -103,7 +110,7 @@
  :label "1 .o 8"
  :name "ratio"
  :outputs [""]
- :parsed [:widget "-81yyrp" 0.6199999999999999 {:type :dial, :skin :circular, :min [:float "1"], :max [:float "8"]}]
+ :parsed [:widget "-jsjz0b" 0.6199999999999999 {:type :dial, :skin :circular, :min [:float "1"], :max [:float "8"]}]
  :pos [-85 -91]
  }}
  :scale 1

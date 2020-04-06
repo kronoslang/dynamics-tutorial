@@ -1,70 +1,192 @@
-{
- :identity "6u6wf0c2kdpgnt3"
+{:identity "6u6wf0c2kdpgnt3"
  :patch
 {:cables
 {["1kl3isjg4eafos5" 0] [:fixed "7tv72pamz5dga77" 0]
  ["1kl3isjg4eafos5" 1] [:fixed "q51345cetjsmz56" 0]
  ["3ggdmd5nx6f5bt0" 0] [:fixed "1kl3isjg4eafos5" 0]
  ["7tv72pamz5dga77" 0] [:fixed "6e997c12xb5bvad" 0]
+ ["c0epzzbzzadgcqa" 0] [:fixed "x3trvv66r964981" 0]
+ ["c0epzzbzzadgcqa" 1] [:fixed "29vtvtw0qm7lb0k" 0]
+ ["c0epzzbzzadgcqa" 2] [:fixed "81mc3oa5fbeyxlp" 0]
+ ["c649zbv7dxs3kt" 0] [:fixed "ebis4awfcc60a4s" 0]
+ ["ebis4awfcc60a4s" 0] [:fixed "yag5csilj8ogtq0" 0]
+ ["ebis4awfcc60a4s" 1] [:fixed "dzvxys9kxqljdt5" 0]
+ ["pwegpoh8vcrftq2" 0] [:fixed "c0epzzbzzadgcqa" 0]
  ["q51345cetjsmz56" 0] [:fixed "7tv72pamz5dga77" 0]
  ["q51345cetjsmz56" 1] [:fixed "9f15lx6szv3claq" 0]
- ["q51345cetjsmz56" 2] [:fixed "3jp8rjjk2jgc3oo" 0]}
+ ["q51345cetjsmz56" 2] [:fixed "3jp8rjjk2jgc3oo" 0]
+ ["x3trvv66r964981" 0] [:fixed "c649zbv7dxs3kt" 0]
+ ["x3trvv66r964981" 1] [:fixed "9f15lx6szv3claq" 0]
+ ["x3trvv66r964981" 2] [:fixed "3jp8rjjk2jgc3oo" 0]
+ ["zgcnzo8rm1trw0w" 0] [:fixed "pwegpoh8vcrftq2" 0]}
  :nodes
 {"1kl3isjg4eafos5" 
 {:inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [-145 -95]
+ :pos [256 -35]
+ }
+ "29vtvtw0qm7lb0k" 
+{:color 3
+ :inputs []
+ :label "6 .o 500"
+ :name "attack"
+ :outputs [""]
+ :parsed [:widget "-pflx9x" 0.21000000000000002 {:type :dial, :skin :circular, :min [:float "6"], :max [:float "500"]}]
+ :pos [18 34]
+ }
+ "3ft9kwx20trjc97" 
+{:inputs []
+ :label ";## Next, let's compress! ##\n\nYou can find several compressor implementations on the tabs of this workspace:\n\n\n- [Basic](#1)\n- [Attack and Release](#2)\n- [Decibel Slew](#3)\n- [\"Analog\"](#4)"
+ :outputs []
+ :parsed [:comment "## Next, let's compress! ##\n\nYou can find several compressor implementations on the tabs of this workspace:\n\n\n- [Basic](#1)\n- [Attack and Release](#2)\n- [Decibel Slew](#3)\n- [\"Analog\"](#4)"]
+ :pos [-400 226]
  }
  "3ggdmd5nx6f5bt0" 
-{:inputs ["sig"]
+{:color 2
+ :inputs ["sig"]
  :label "o))"
+ :name "play here!"
  :outputs ["thru"]
  :parsed [:playback [:free-var "sig"]]
- :pos [-34 -96]
+ :pos [414 -79]
  }
  "3jp8rjjk2jgc3oo" 
-{:inputs []
+{:color 3
+ :inputs []
  :label "1 -o- 8"
  :name "ratio"
  :outputs [""]
- :parsed [:widget "e07msk" 0.5 {:type :slider, :limits [[:float "1"] [:float "8"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
- :pos [-320 -461]
+ :parsed [:widget "e07msk" 0.4819048200334821 {:type :slider, :limits [[:float "1"] [:float "8"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :pos [91 -413]
  }
  "6e997c12xb5bvad" 
 {:inputs []
  :label "0.5"
  :outputs [""]
  :parsed [:float "0.5"]
- :pos [-713 -195]
+ :pos [-302 -107]
  }
  "7tv72pamz5dga77" 
 {:inputs ["freq"]
  :label "Gen:Phasor($freq)"
  :outputs [""]
  :parsed [:fn "Gen:Phasor" [:tuple [:free-var "freq"]]]
- :pos [-590 -195]
+ :pos [-179 -107]
+ }
+ "81mc3oa5fbeyxlp" 
+{:color 3
+ :inputs []
+ :label "20 .o 100"
+ :name "release"
+ :outputs [""]
+ :parsed [:widget "q4hke7" 0.24 {:type :dial, :skin :circular, :min [:float "20"], :max [:float "100"]}]
+ :pos [118 34]
+ }
+ "922b79f2m2q3rq4" 
+{:color 2
+ :inputs []
+ :label "; Compressors automatically reduce audio levels when the signal crosses a *compression threshold*. \n\nThis example demonstrates the shape of the compressor's \"knee\".\n\n\nThe response is determined by the attenuator circuit on [this tab](#5). You can also right-click on `Attenuation` and select *goto*."
+ :outputs []
+ :parsed [:comment "Compressors automatically reduce audio levels when the signal crosses a *compression threshold*. \n\nThis example demonstrates the shape of the compressor's \"knee\".\n\n\nThe response is determined by the attenuator circuit on [this tab](#5). You can also right-click on `Attenuation` and select *goto*."]
+ :pos [483 -382]
  }
  "9f15lx6szv3claq" 
-{:inputs []
+{:color 3
+ :inputs []
  :label "-24 -o- 0"
  :name "threshold"
  :outputs [""]
- :parsed [:widget "ifzzj6" 0.5 {:type :slider, :limits [[:float "-24"] [:float "0"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
- :pos [-416 -461]
+ :parsed [:widget "ifzzj6" 0.5033333914620536 {:type :slider, :limits [[:float "-24"] [:float "0"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :pos [-5 -413]
+ }
+ "c0epzzbzzadgcqa" 
+{:inputs ["sig" "attack" "release"]
+ :label "dB-Slew($sig $attack $release)"
+ :outputs [""]
+ :parsed [:fn "dB-Slew" [:tuple [:free-var "sig"] [:free-var "attack"] [:free-var "release"]]]
+ :pos [174 197]
+ }
+ "c649zbv7dxs3kt" 
+{:inputs ["a"]
+ :label "+ 1"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:float "1"]]
+ :pos [-223 137]
+ }
+ "c8zh4h01kmi38w0" 
+{:color 4
+ :inputs []
+ :label "; Time constants are the other important piece of dynamics processing.\n\n\nThis example demonstrates how a *lag circuit* slows down the change in attenuation."
+ :outputs []
+ :parsed [:comment "Time constants are the other important piece of dynamics processing.\n\n\nThis example demonstrates how a *lag circuit* slows down the change in attenuation."]
+ :pos [483 40]
  }
  "cdj3cfrkd34l565" 
 {:inputs []
  :label ";# Welcome to the Compressor Tutorial! #\n\n\nThis workspace demonstrates several kinds of digital compressors built from first principles."
  :outputs []
  :parsed [:comment "# Welcome to the Compressor Tutorial! #\n\n\nThis workspace demonstrates several kinds of digital compressors built from first principles."]
- :pos [-693 -559]
+ :pos [-300 -413]
+ }
+ "dzvxys9kxqljdt5" 
+{:inputs []
+ :label "0.5"
+ :outputs [""]
+ :parsed [:float "0.5"]
+ :pos [-410 70]
+ }
+ "ebis4awfcc60a4s" 
+{:inputs ["freq" "width"]
+ :label "Gen:Pulse($freq $width)"
+ :outputs [""]
+ :parsed [:fn "Gen:Pulse" [:tuple [:free-var "freq"] [:free-var "width"]]]
+ :pos [-325 137]
+ }
+ "iwx8e9c6ste7bj2" 
+{:color 3
+ :inputs []
+ :label "; tweak here!"
+ :outputs []
+ :parsed [:comment "tweak here!"]
+ :pos [43 -498]
+ }
+ "pwegpoh8vcrftq2" 
+{:inputs ["a"]
+ :label "Math:Log($a)"
+ :outputs [""]
+ :parsed [:fn "Math:Log" [:tuple [:free-var "a"]]]
+ :pos [318 240]
  }
  "q51345cetjsmz56" 
 {:inputs ["sig" "threshold" "ratio"]
  :label "Attenuation($sig $threshold $ratio)"
  :outputs [""]
  :parsed [:fn "Attenuation" [:tuple [:free-var "sig"] [:free-var "threshold"] [:free-var "ratio"]]]
- :pos [-264 -189]
- }}}}
+ :pos [62 -105]
+ }
+ "x3trvv66r964981" 
+{:inputs ["sig" "threshold" "ratio"]
+ :label "Attenuation($sig $threshold $ratio)"
+ :outputs [""]
+ :parsed [:fn "Attenuation" [:tuple [:free-var "sig"] [:free-var "threshold"] [:free-var "ratio"]]]
+ :pos [-55 197]
+ }
+ "yag5csilj8ogtq0" 
+{:inputs []
+ :label "0.2"
+ :outputs [""]
+ :parsed [:float "0.2"]
+ :pos [-440 137]
+ }
+ "zgcnzo8rm1trw0w" 
+{:color 4
+ :inputs ["sig"]
+ :label "o))"
+ :outputs ["thru"]
+ :parsed [:playback [:free-var "sig"]]
+ :pos [414 240]
+ }}
+ :scale 1
+ :scroll [0 0]}}

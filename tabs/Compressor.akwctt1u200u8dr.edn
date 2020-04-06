@@ -111,6 +111,13 @@
  :parsed [:widget "-l197ah" 0.40047607421875 {:type :slider, :limits [[:float "0.01"] [:float "2.5"]], :render [:limits], :size 3, :orientation :vertical, :curve :exponential}]
  :pos [19 -95]
  }
+ "kdf4uxr4v3gz874" 
+{:inputs []
+ :label ";### Next up... ###\n\n\nSome people prefer to specify attack and release as [decibel slews](#3)"
+ :outputs []
+ :parsed [:comment "### Next up... ###\n\n\nSome people prefer to specify attack and release as [decibel slews](#3)"]
+ :pos [469 -70]
+ :selected true}
  "p1nrdpppv7qw335" 
 {:inputs ["sig" "threshold" "ratio"]
  :label "Attenuation($sig $threshold $ratio)"
@@ -125,7 +132,7 @@
  :outputs []
  :parsed [:comment "# Attack-Release Compressor #\n\nNormally compressors allow the user to set the lag time depending on whether the compressor is in *attack* or *release* phase.\n\nThis circuit accomplishes that by selecting one of two lag times depending on whether the attenuation value is moving up or down."]
  :pos [-293 -432]
- :selected true}
+ }
  "ui8cg6e58ra1a7u" 
 {:color 4
  :inputs ["truth" "when-true" "when-false"]
