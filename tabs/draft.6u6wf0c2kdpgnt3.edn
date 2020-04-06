@@ -25,7 +25,7 @@
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [256 -35]
+ :pos [183 4]
  }
  "29vtvtw0qm7lb0k" 
 {:color 3
@@ -34,15 +34,15 @@
  :name "attack"
  :outputs [""]
  :parsed [:widget "-pflx9x" 0.21000000000000002 {:type :dial, :skin :circular, :min [:float "6"], :max [:float "500"]}]
- :pos [18 34]
+ :pos [-55 73]
  }
  "3ft9kwx20trjc97" 
 {:inputs []
  :label ";## Next, let's compress! ##\n\nYou can find several compressor implementations on the tabs of this workspace:\n\n\n- [Basic](#1)\n- [Attack and Release](#2)\n- [Decibel Slew](#3)\n- [\"Analog\"](#4)"
  :outputs []
  :parsed [:comment "## Next, let's compress! ##\n\nYou can find several compressor implementations on the tabs of this workspace:\n\n\n- [Basic](#1)\n- [Attack and Release](#2)\n- [Decibel Slew](#3)\n- [\"Analog\"](#4)"]
- :pos [-400 226]
- }
+ :pos [-465 247]
+ :selected true}
  "3ggdmd5nx6f5bt0" 
 {:color 2
  :inputs ["sig"]
@@ -50,7 +50,7 @@
  :name "play here!"
  :outputs ["thru"]
  :parsed [:playback [:free-var "sig"]]
- :pos [414 -79]
+ :pos [341 -40]
  }
  "3jp8rjjk2jgc3oo" 
 {:color 3
@@ -59,21 +59,21 @@
  :name "ratio"
  :outputs [""]
  :parsed [:widget "e07msk" 0.4819048200334821 {:type :slider, :limits [[:float "1"] [:float "8"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
- :pos [91 -413]
+ :pos [18 -374]
  }
  "6e997c12xb5bvad" 
 {:inputs []
  :label "0.5"
  :outputs [""]
  :parsed [:float "0.5"]
- :pos [-302 -107]
+ :pos [-375 -68]
  }
  "7tv72pamz5dga77" 
 {:inputs ["freq"]
  :label "Gen:Phasor($freq)"
  :outputs [""]
  :parsed [:fn "Gen:Phasor" [:tuple [:free-var "freq"]]]
- :pos [-179 -107]
+ :pos [-252 -68]
  }
  "81mc3oa5fbeyxlp" 
 {:color 3
@@ -82,7 +82,7 @@
  :name "release"
  :outputs [""]
  :parsed [:widget "q4hke7" 0.24 {:type :dial, :skin :circular, :min [:float "20"], :max [:float "100"]}]
- :pos [118 34]
+ :pos [45 73]
  }
  "922b79f2m2q3rq4" 
 {:color 2
@@ -90,7 +90,7 @@
  :label "; Compressors automatically reduce audio levels when the signal crosses a *compression threshold*. \n\nThis example demonstrates the shape of the compressor's \"knee\".\n\n\nThe response is determined by the attenuator circuit on [this tab](#5). You can also right-click on `Attenuation` and select *goto*."
  :outputs []
  :parsed [:comment "Compressors automatically reduce audio levels when the signal crosses a *compression threshold*. \n\nThis example demonstrates the shape of the compressor's \"knee\".\n\n\nThe response is determined by the attenuator circuit on [this tab](#5). You can also right-click on `Attenuation` and select *goto*."]
- :pos [483 -382]
+ :pos [410 -343]
  }
  "9f15lx6szv3claq" 
 {:color 3
@@ -99,21 +99,21 @@
  :name "threshold"
  :outputs [""]
  :parsed [:widget "ifzzj6" 0.5033333914620536 {:type :slider, :limits [[:float "-24"] [:float "0"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
- :pos [-5 -413]
+ :pos [-78 -374]
  }
  "c0epzzbzzadgcqa" 
 {:inputs ["sig" "attack" "release"]
  :label "dB-Slew($sig $attack $release)"
  :outputs [""]
  :parsed [:fn "dB-Slew" [:tuple [:free-var "sig"] [:free-var "attack"] [:free-var "release"]]]
- :pos [174 197]
+ :pos [101 236]
  }
  "c649zbv7dxs3kt" 
 {:inputs ["a"]
  :label "+ 1"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:float "1"]]
- :pos [-223 137]
+ :pos [-296 176]
  }
  "c8zh4h01kmi38w0" 
 {:color 4
@@ -121,28 +121,28 @@
  :label "; Time constants are the other important piece of dynamics processing.\n\n\nThis example demonstrates how a *lag circuit* slows down the change in attenuation."
  :outputs []
  :parsed [:comment "Time constants are the other important piece of dynamics processing.\n\n\nThis example demonstrates how a *lag circuit* slows down the change in attenuation."]
- :pos [483 40]
+ :pos [410 79]
  }
  "cdj3cfrkd34l565" 
 {:inputs []
  :label ";# Welcome to the Compressor Tutorial! #\n\n\nThis workspace demonstrates several kinds of digital compressors built from first principles."
  :outputs []
  :parsed [:comment "# Welcome to the Compressor Tutorial! #\n\n\nThis workspace demonstrates several kinds of digital compressors built from first principles."]
- :pos [-300 -413]
+ :pos [-373 -374]
  }
  "dzvxys9kxqljdt5" 
 {:inputs []
  :label "0.5"
  :outputs [""]
  :parsed [:float "0.5"]
- :pos [-410 70]
+ :pos [-483 109]
  }
  "ebis4awfcc60a4s" 
 {:inputs ["freq" "width"]
  :label "Gen:Pulse($freq $width)"
  :outputs [""]
  :parsed [:fn "Gen:Pulse" [:tuple [:free-var "freq"] [:free-var "width"]]]
- :pos [-325 137]
+ :pos [-398 176]
  }
  "iwx8e9c6ste7bj2" 
 {:color 3
@@ -150,43 +150,44 @@
  :label "; tweak here!"
  :outputs []
  :parsed [:comment "tweak here!"]
- :pos [43 -498]
+ :pos [-30 -459]
  }
  "pwegpoh8vcrftq2" 
 {:inputs ["a"]
  :label "Math:Log($a)"
  :outputs [""]
  :parsed [:fn "Math:Log" [:tuple [:free-var "a"]]]
- :pos [318 240]
+ :pos [245 279]
  }
  "q51345cetjsmz56" 
 {:inputs ["sig" "threshold" "ratio"]
  :label "Attenuation($sig $threshold $ratio)"
  :outputs [""]
  :parsed [:fn "Attenuation" [:tuple [:free-var "sig"] [:free-var "threshold"] [:free-var "ratio"]]]
- :pos [62 -105]
+ :pos [-11 -66]
  }
  "x3trvv66r964981" 
 {:inputs ["sig" "threshold" "ratio"]
  :label "Attenuation($sig $threshold $ratio)"
  :outputs [""]
  :parsed [:fn "Attenuation" [:tuple [:free-var "sig"] [:free-var "threshold"] [:free-var "ratio"]]]
- :pos [-55 197]
+ :pos [-128 236]
  }
  "yag5csilj8ogtq0" 
 {:inputs []
  :label "0.2"
  :outputs [""]
  :parsed [:float "0.2"]
- :pos [-440 137]
+ :pos [-513 176]
  }
  "zgcnzo8rm1trw0w" 
 {:color 4
  :inputs ["sig"]
  :label "o))"
+ :name "play here!"
  :outputs ["thru"]
  :parsed [:playback [:free-var "sig"]]
- :pos [414 240]
+ :pos [341 279]
  }}
  :scale 1
  :scroll [0 0]}}

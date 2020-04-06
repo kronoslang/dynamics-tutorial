@@ -32,14 +32,14 @@
  :label "Rate-of($sig)"
  :outputs [""]
  :parsed [:fn "Rate-of" [:tuple [:free-var "sig"]]]
- :pos [-272 -140]}
+ :pos [-284 -202]}
  "6nh73tou2ghh4ud" 
 {:color 2
  :inputs []
  :label "#1"
  :outputs [""]
  :parsed [:invariant "1"]
- :pos [-308 97]}
+ :pos [-320 35]}
  "70obqbj879qogg1" 
 {:cable-midpoints 
 {}
@@ -48,33 +48,33 @@
  :label "/"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
- :pos [-207 33]}
+ :pos [-219 -29]}
  "7fvbj17p42k8nsi" 
 {:color 3
  :inputs []
  :label "; First, we transform dB/sec to dB/sample, and compute the corresponding gain coefficients."
  :outputs []
  :parsed [:comment "First, we transform dB/sec to dB/sample, and compute the corresponding gain coefficients."]
- :pos [-190 -273]}
+ :pos [-202 -335]}
  "7mhgtrisbvjfv4y" 
 {:inputs []
  :label "(sig attack release) = arg"
  :outputs ["sig" "attack" "release"]
  :parsed "arg"
- :pos [-440 -105]}
+ :pos [-452 -167]}
  "7xj90i96f42z4wu" 
 {:inputs []
  :label "; # Logarithmic Slew Limiter #\n\n\nThis circuit restricts the rate at which a signal goes up or down.\n\n\nThe circuit operates on the logarithmic scale: the limits are determined by *multiplying* the previous output with coefficients computed from the decibel slopes."
  :outputs []
  :parsed [:comment "# Logarithmic Slew Limiter #\n\n\nThis circuit restricts the rate at which a signal goes up or down.\n\n\nThe circuit operates on the logarithmic scale: the limits are determined by *multiplying* the previous output with coefficients computed from the decibel slopes."]
- :pos [322 -250]}
+ :pos [310 -312]}
  "8ncgoj7jyak4xnf" 
 {:color 3
  :inputs ["db"]
  :label "From-dB($db)"
  :outputs [""]
  :parsed [:fn "From-dB" [:tuple [:free-var "db"]]]
- :pos [-30 -42]}
+ :pos [-42 -104]}
  "8wml674pug153r8" 
 {:cable-midpoints 
 {}
@@ -82,7 +82,7 @@
  :label "$out"
  :outputs [""]
  :parsed [:free-var "out"]
- :pos [305 360]}
+ :pos [293 298]}
  "die6ho2p1w0kk0" 
 {:cable-midpoints 
 {}
@@ -91,21 +91,21 @@
  :label "Coerce($type $value)"
  :outputs [""]
  :parsed [:fn "Coerce" [:tuple [:free-var "type"] [:free-var "value"]]]
- :pos [-263 174]}
+ :pos [-275 112]}
  "g469j15y976uhbg" 
 {:color 3
  :inputs ["db"]
  :label "From-dB($db)"
  :outputs [""]
  :parsed [:fn "From-dB" [:tuple [:free-var "db"]]]
- :pos [-67 33]}
+ :pos [-79 -29]}
  "gebmx72aj9tc3t5" 
 {:color 3
  :inputs ["a" "b" "more..."]
  :label "/"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
- :pos [-159 -42]}
+ :pos [-171 -104]}
  "jqv1yng9qgl2rmp" 
 {:cable-midpoints 
 {0 [13 257]}
@@ -114,7 +114,7 @@
  :label "Math:Clamp($x $low-bound $high-bound)"
  :outputs [""]
  :parsed [:fn "Math:Clamp" [:tuple [:free-var "x"] [:free-var "low-bound"] [:free-var "high-bound"]]]
- :pos [159 321]}
+ :pos [147 259]}
  "lox0rpf07sy1sd" 
 {:cable-midpoints 
 {1 [11 -148]}
@@ -123,35 +123,35 @@
  :label "z-1($init $sig~)"
  :outputs [""]
  :parsed [:fn "z-1" [:tuple [:free-var "init"] [:free-var "sig~"]]]
- :pos [-121 172]}
+ :pos [-133 110]}
  "qv7gqqk2pnqr04y" 
 {:color 4
  :inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [103 259]}
+ :pos [91 197]}
  "st4nkcuv2g18vgm" 
 {:color 4
  :inputs []
  :label "; Finally we compute the output by `Clamp`ing based on relative limits computed from the *previous* output."
  :outputs []
  :parsed [:comment "Finally we compute the output by `Clamp`ing based on relative limits computed from the *previous* output."]
- :pos [371 174]}
+ :pos [359 112]}
  "to6dhmf9g9rup39" 
 {:color 4
  :inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [33 172]}
+ :pos [21 110]}
  "yrhapgszw0rr1ob" 
 {:color 2
  :inputs []
  :label "; The initial state of the circuit must be at unity, with a type that matches the input signal."
  :outputs []
  :parsed [:comment "The initial state of the circuit must be at unity, with a type that matches the input signal."]
- :pos [-388 231]}
+ :pos [-400 169]}
  "zdkxt6e27u089mq" 
 {:cable-midpoints 
 {}
@@ -160,6 +160,6 @@
  :label "Neg($a)"
  :outputs [""]
  :parsed [:fn "Neg" [:tuple [:free-var "a"]]]
- :pos [-277 -40]}}
+ :pos [-289 -102]}}
  :scale 1
  :scroll [0 0]}}

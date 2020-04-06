@@ -19,15 +19,15 @@
  :name "lag circuit"
  :outputs [""]
  :parsed [:fn "Lag" [:tuple [:free-var "sig"] [:free-var "lag"]]]
- :pos [177 181]
+ :pos [143 127]
  }
  "2mb3pa782n3i62t" 
 {:inputs []
  :label ";### Next up.... ###\n\n\nCheck out how to add [attack and release!](#2)"
  :outputs []
  :parsed [:comment "### Next up.... ###\n\n\nCheck out how to add [attack and release!](#2)"]
- :pos [-264 372]
- :selected true}
+ :pos [-298 318]
+ }
  "3klnz203x9fs42u" 
 {:ephemeral-inputs #{"more"}
  :inputs ["a" "b" "more" "more..."]
@@ -35,7 +35,7 @@
  :name "gain stage"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more..."]]
- :pos [318 277]
+ :pos [284 223]
  }
  "5mcstichevt59el" 
 {:inputs ["sig" "threshold" "ratio"]
@@ -43,21 +43,21 @@
  :name "find gain target"
  :outputs [""]
  :parsed [:fn "Attenuation" [:tuple [:free-var "sig"] [:free-var "threshold"] [:free-var "ratio"]]]
- :pos [-35 171]
+ :pos [-69 117]
  }
  "7zvuy3clb9jjzjo" 
 {:inputs ["db"]
  :label "From-dB($db)"
  :outputs [""]
  :parsed [:fn "From-dB" [:tuple [:free-var "db"]]]
- :pos [293 71]
+ :pos [259 17]
  }
  "8x2ukaa8j1qb7y3" 
 {:inputs []
  :label "; # Simple Compressor #\n\n\nThis circuit combines the attenuation target computation with a `Lag` circuit.\n\n\n`Lag` is important, since applying the attenuation immediately would result in nothing but a simple distortion."
  :outputs []
  :parsed [:comment "# Simple Compressor #\n\n\nThis circuit combines the attenuation target computation with a `Lag` circuit.\n\n\n`Lag` is important, since applying the attenuation immediately would result in nothing but a simple distortion."]
- :pos [-230 -381]
+ :pos [-264 -435]
  }
  "glpro485l3w7vt5" 
 {:color 3
@@ -66,7 +66,7 @@
  :name "makeup gain"
  :outputs [""]
  :parsed [:widget "sqrves" 0.665 {:type :dial, :skin :circular, :min [:float "-24"], :max [:float "24"]}]
- :pos [206 -133]
+ :pos [172 -187]
  }
  "ls8ze754hvnf3jy" 
 {:cable-midpoints 
@@ -76,7 +76,7 @@
  :name "play here!"
  :outputs ["thru"]
  :parsed [:playback [:free-var "sig"]]
- :pos [72 384]
+ :pos [38 330]
  }
  "m2lcjs8hnfz9efw" 
 {:color 3
@@ -85,7 +85,7 @@
  :name "threshold"
  :outputs [""]
  :parsed [:widget "uni72b" 0.1861903599330357 {:type :slider, :limits [[:float "-60"] [:float "0"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
- :pos [-281 -133]
+ :pos [-315 -187]
  }
  "q8prjlc1b7l2i6q" 
 {:inputs []
@@ -93,7 +93,7 @@
  :name "test sound"
  :outputs [""]
  :parsed [:fn "Test-Drums" [:tuple]]
- :pos [-286 284]
+ :pos [-320 230]
  }
  "y9740b8ps8vevpz" 
 {:color 3
@@ -102,7 +102,7 @@
  :name "lag time"
  :outputs [""]
  :parsed [:widget "-rv09as" 0.15761893136160715 {:type :slider, :limits [[:float "0.01"] [:float "2.5"]], :render [:limits], :size 3, :orientation :vertical, :curve :exponential}]
- :pos [91 -133]
+ :pos [57 -187]
  }
  "yw9qsy1a948rsq" 
 {:color 3
@@ -111,7 +111,7 @@
  :name "ratio"
  :outputs [""]
  :parsed [:widget "-jsjz0b" 0.6199999999999999 {:type :dial, :skin :circular, :min [:float "1"], :max [:float "8"]}]
- :pos [-85 -91]
+ :pos [-119 -145]
  }}
  :scale 1
  :scroll [0 0]}}

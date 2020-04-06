@@ -33,7 +33,7 @@
  :label "; # 'Analog' Compressor #\n\n\nThis circuit is a simple approximation of the nonlinearity produced by tube compressors - generation of even harmonics with increasing attenuation."
  :outputs []
  :parsed [:comment "# 'Analog' Compressor #\n\n\nThis circuit is a simple approximation of the nonlinearity produced by tube compressors - generation of even harmonics with increasing attenuation."]
- :pos [-401 -400]
+ :pos [-444 -465]
  }
  "14l2bred4xhw7mo" 
 {:color 4
@@ -41,7 +41,7 @@
  :label "; ## Bias and Nonlinearity ##\n\n\nThis circuit is loosely based on how vari-mu compressors color the signal, but is not physically modeled.\n\n\nThe gain stage introduces a DC offset that increases with attenuation.\n\n\nCombined with soft saturation, the biased signal produces asymmetric distortion when the attenuation is high. \n\n\n\nFinally we remove any DC offset after soft saturation."
  :outputs []
  :parsed [:comment "## Bias and Nonlinearity ##\n\n\nThis circuit is loosely based on how vari-mu compressors color the signal, but is not physically modeled.\n\n\nThe gain stage introduces a DC offset that increases with attenuation.\n\n\nCombined with soft saturation, the biased signal produces asymmetric distortion when the attenuation is high. \n\n\n\nFinally we remove any DC offset after soft saturation."]
- :pos [466 -310]
+ :pos [423 -375]
  }
  "2ut8qee3q428b6q" 
 {:inputs ["sig" "lag"]
@@ -49,7 +49,7 @@
  :name "lag circuit"
  :outputs [""]
  :parsed [:fn "Lag" [:tuple [:free-var "sig"] [:free-var "lag"]]]
- :pos [149 131]
+ :pos [106 66]
  }
  "4z4wza7iqte71e" 
 {:color 3
@@ -58,7 +58,7 @@
  :name "release"
  :outputs [""]
  :parsed [:widget "som0u8" 0.39619053431919643 {:type :slider, :limits [[:float "0.01"] [:float "2.5"]], :render [:limits], :size 3, :orientation :vertical, :curve :exponential}]
- :pos [-136 -180]
+ :pos [-179 -245]
  }
  "50t3kl4b5phwccq" 
 {:color 4
@@ -66,7 +66,7 @@
  :label "1 -"
  :outputs [""]
  :parsed [:infix [:float "1"] "-" [:free-var "b"]]
- :pos [368 132]
+ :pos [325 67]
  }
  "5lwab81th6tl54q" 
 {:cable-midpoints 
@@ -77,7 +77,7 @@
  :name "bias"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
- :pos [414 302]
+ :pos [371 237]
  }
  "5r09ppsh94f1z6r" 
 {:color 4
@@ -85,7 +85,7 @@
  :label "8"
  :outputs [""]
  :parsed [:float "8"]
- :pos [537 65]
+ :pos [494 0]
  }
  "6yx9ih8vz8fmahz" 
 {:color 4
@@ -95,7 +95,7 @@
  :name "bias shape"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more2"] [:free-var "more..."]]
- :pos [486 176]
+ :pos [443 111]
  }
  "90h3ka7sb22p2l1" 
 {:color 3
@@ -104,7 +104,7 @@
  :name "ratio"
  :outputs [""]
  :parsed [:widget "-xpvbyu" 1 {:type :dial, :skin :circular, :min [:float "1"], :max [:float "8"]}]
- :pos [-414 -180]
+ :pos [-457 -245]
  }
  "9hbaz313lyp1o5e" 
 {:color 4
@@ -113,7 +113,7 @@
  :name "bias lag"
  :outputs [""]
  :parsed [:fn "Filter:Lpf6" [:tuple [:free-var "sig"] [:free-var "cutoff"]]]
- :pos [595 176]
+ :pos [552 111]
  }
  "9s8zl9td54edudh" 
 {:color 3
@@ -122,7 +122,7 @@
  :name "threshold"
  :outputs [""]
  :parsed [:widget "-kzt5fh" 0.2533333914620536 {:type :slider, :limits [[:float "-60"] [:float "0"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
- :pos [-536 -180]
+ :pos [-579 -245]
  }
  "cws4z6gl25m340x" 
 {:color 3
@@ -131,7 +131,7 @@
  :name "attack"
  :outputs [""]
  :parsed [:widget "-r1doso" 0.6390476771763393 {:type :slider, :limits [[:float "0.005"] [:float "0.3"]], :render [:limits], :size 3, :orientation :vertical, :curve :exponential}]
- :pos [-225 -180]
+ :pos [-268 -245]
  }
  "dldc5etdshyahsl" 
 {:inputs ["sig" "threshold" "ratio"]
@@ -139,7 +139,7 @@
  :name "find gain target"
  :outputs [""]
  :parsed [:fn "Attenuation" [:tuple [:free-var "sig"] [:free-var "threshold"] [:free-var "ratio"]]]
- :pos [-294 133]
+ :pos [-337 68]
  }
  "l77a48d59e0s4po" 
 {:color 4
@@ -147,14 +147,14 @@
  :label "0.3"
  :outputs [""]
  :parsed [:float "0.3"]
- :pos [368 54]
+ :pos [325 -11]
  }
  "o5rr7hvmig1stsw" 
 {:inputs []
  :label ";### Next up.... ###\n\n\nThe rest of the tabs in this workspace demonstrate several subcircuits in a compressor:\n\n\n- [Computing target attenuation](#5)\n- [Decibel slew limiter](#6)\n- [Lag circuit](#7)\n- [Decibel to Linear conversion](#8)\n- [Test audio player](#9)"
  :outputs []
  :parsed [:comment "### Next up.... ###\n\n\nThe rest of the tabs in this workspace demonstrate several subcircuits in a compressor:\n\n\n- [Computing target attenuation](#5)\n- [Decibel slew limiter](#6)\n- [Lag circuit](#7)\n- [Decibel to Linear conversion](#8)\n- [Test audio player](#9)"]
- :pos [-411 343]
+ :pos [-454 278]
  :selected true}
  "o9v2kcse9cn1lp3" 
 {:color 4
@@ -163,14 +163,14 @@
  :name "DC blocker"
  :outputs [""]
  :parsed [:fn "Filter:DC" [:tuple [:free-var "sig"]]]
- :pos [599 302]
+ :pos [556 237]
  }
  "p6ge203dacesc3g" 
 {:inputs ["db"]
  :label "From-dB($db)"
  :outputs [""]
  :parsed [:fn "From-dB" [:tuple [:free-var "db"]]]
- :pos [120 34]
+ :pos [77 -31]
  }
  "pcf553s43pp36cy" 
 {:inputs []
@@ -178,14 +178,14 @@
  :name "test sound"
  :outputs [""]
  :parsed [:fn "Test-Drums" [:tuple]]
- :pos [-498 243]
+ :pos [-541 178]
  }
  "r7r6qbb4k07ji40" 
 {:inputs ["sig"]
  :label "Control:Edge-($sig)"
  :outputs [""]
  :parsed [:fn "Control:Edge-" [:tuple [:free-var "sig"]]]
- :pos [-123 77]
+ :pos [-166 12]
  }
  "ubi6e425okqjrpr" 
 {:cable-midpoints 
@@ -195,7 +195,7 @@
  :name "play here!"
  :outputs ["thru"]
  :parsed [:playback [:free-var "sig"]]
- :pos [-27 349]
+ :pos [-70 284]
  }
  "vhe7alru78q9nyj" 
 {:color 3
@@ -204,7 +204,7 @@
  :name "makeup gain"
  :outputs [""]
  :parsed [:widget "-iy04xl" 0.975 {:type :dial, :skin :circular, :min [:float "-24"], :max [:float "24"]}]
- :pos [3 -180]
+ :pos [-40 -245]
  }
  "vljn8mjdjmonyep" 
 {:color 4
@@ -213,7 +213,7 @@
  :name "saturation"
  :outputs [""]
  :parsed [:fn "Approx:Tanh" [:tuple [:free-var "w"]]]
- :pos [506 302]
+ :pos [463 237]
  }
  "vrc7yqilbbwq6j" 
 {:ephemeral-inputs #{"more"}
@@ -222,14 +222,14 @@
  :name "gain stage"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more..."]]
- :pos [265 243]
+ :pos [222 178]
  }
  "w4o4ic4ohhp52t5" 
 {:inputs ["truth" "when-true" "when-false"]
  :label "Algorithm:Choose($truth $when-true $when-false)"
  :outputs [""]
  :parsed [:fn "Algorithm:Choose" [:tuple [:free-var "truth"] [:free-var "when-true"] [:free-var "when-false"]]]
- :pos [-1 77]
+ :pos [-44 12]
  }}
  :scale 1
  :scroll [0 0]}}

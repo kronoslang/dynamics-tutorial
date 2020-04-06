@@ -24,7 +24,7 @@
  :name "makeup gain"
  :outputs [""]
  :parsed [:widget "-uzrodd" 0.665 {:type :dial, :skin :circular, :min [:float "-24"], :max [:float "24"]}]
- :pos [158 -95]
+ :pos [44 -115]
  }
  "58x25yrkh7dchb2" 
 {:ephemeral-inputs #{"more"}
@@ -33,14 +33,14 @@
  :name "gain stage"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more..."]]
- :pos [469 331]
+ :pos [355 311]
  }
  "6oc3k2iwxsnye4j" 
 {:inputs ["db"]
  :label "From-dB($db)"
  :outputs [""]
  :parsed [:fn "From-dB" [:tuple [:free-var "db"]]]
- :pos [343 100]
+ :pos [229 80]
  }
  "7aven0mzg32jp9k" 
 {:cable-midpoints 
@@ -49,7 +49,7 @@
  :label "o))"
  :outputs ["thru"]
  :parsed [:playback [:free-var "sig"]]
- :pos [29 423]
+ :pos [-85 403]
  }
  "8ye99ampg83u7u9" 
 {:inputs ["sig" "lag"]
@@ -57,7 +57,7 @@
  :name "lag circuit"
  :outputs [""]
  :parsed [:fn "Lag" [:tuple [:free-var "sig"] [:free-var "lag"]]]
- :pos [388 218]
+ :pos [274 198]
  }
  "9rntnwuwx87bu" 
 {:color 3
@@ -66,7 +66,7 @@
  :name "ratio"
  :outputs [""]
  :parsed [:widget "-b3uxc5" 1 {:type :dial, :skin :circular, :min [:float "1"], :max [:float "8"]}]
- :pos [-259 -95]
+ :pos [-373 -115]
  }
  "aqbb59fvcpfd9r" 
 {:color 4
@@ -74,7 +74,7 @@
  :label "Control:Edge-($sig)"
  :outputs [""]
  :parsed [:fn "Control:Edge-" [:tuple [:free-var "sig"]]]
- :pos [32 162]
+ :pos [-82 142]
  }
  "bdjiqty2l3i0mp7" 
 {:color 3
@@ -83,7 +83,7 @@
  :name "attack"
  :outputs [""]
  :parsed [:widget "97z5j7" 0.5433332170758929 {:type :slider, :limits [[:float "0.005"] [:float "0.3"]], :render [:limits], :size 3, :orientation :vertical, :curve :exponential}]
- :pos [-70 -95]
+ :pos [-184 -115]
  }
  "bwnninc7zptzn4t" 
 {:color 4
@@ -91,7 +91,7 @@
  :label "; `Edge-` outputs a logical true when the input signal is going down.\n\n\n`Choose` selects one from two values depending on that truth value."
  :outputs []
  :parsed [:comment "`Edge-` outputs a logical true when the input signal is going down.\n\n\n`Choose` selects one from two values depending on that truth value."]
- :pos [140 260]
+ :pos [26 240]
  }
  "friszr7itzq9kii" 
 {:color 3
@@ -100,7 +100,7 @@
  :name "threshold"
  :outputs [""]
  :parsed [:widget "a5sni1" 0.3361903599330357 {:type :slider, :limits [[:float "-60"] [:float "0"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
- :pos [-381 -95]
+ :pos [-495 -115]
  }
  "k1k4zj2e592kb1s" 
 {:color 3
@@ -109,14 +109,14 @@
  :name "release"
  :outputs [""]
  :parsed [:widget "-l197ah" 0.40047607421875 {:type :slider, :limits [[:float "0.01"] [:float "2.5"]], :render [:limits], :size 3, :orientation :vertical, :curve :exponential}]
- :pos [19 -95]
+ :pos [-95 -115]
  }
  "kdf4uxr4v3gz874" 
 {:inputs []
  :label ";### Next up... ###\n\n\nSome people prefer to specify attack and release as [decibel slews](#3)"
  :outputs []
  :parsed [:comment "### Next up... ###\n\n\nSome people prefer to specify attack and release as [decibel slews](#3)"]
- :pos [469 -70]
+ :pos [395 -70]
  :selected true}
  "p1nrdpppv7qw335" 
 {:inputs ["sig" "threshold" "ratio"]
@@ -124,14 +124,14 @@
  :name "find gain target"
  :outputs [""]
  :parsed [:fn "Attenuation" [:tuple [:free-var "sig"] [:free-var "threshold"] [:free-var "ratio"]]]
- :pos [-139 218]
+ :pos [-253 198]
  }
  "sef4k403xu9jqr3" 
 {:inputs []
  :label "; # Attack-Release Compressor #\n\nNormally compressors allow the user to set the lag time depending on whether the compressor is in *attack* or *release* phase.\n\nThis circuit accomplishes that by selecting one of two lag times depending on whether the attenuation value is moving up or down."
  :outputs []
  :parsed [:comment "# Attack-Release Compressor #\n\nNormally compressors allow the user to set the lag time depending on whether the compressor is in *attack* or *release* phase.\n\nThis circuit accomplishes that by selecting one of two lag times depending on whether the attenuation value is moving up or down."]
- :pos [-293 -432]
+ :pos [-407 -452]
  }
  "ui8cg6e58ra1a7u" 
 {:color 4
@@ -139,7 +139,7 @@
  :label "Algorithm:Choose($truth $when-true $when-false)"
  :outputs [""]
  :parsed [:fn "Algorithm:Choose" [:tuple [:free-var "truth"] [:free-var "when-true"] [:free-var "when-false"]]]
- :pos [154 162]
+ :pos [40 142]
  }
  "x90j9zgy8ta02vb" 
 {:inputs []
@@ -147,7 +147,7 @@
  :name "test sound"
  :outputs [""]
  :parsed [:fn "Test-Drums" [:tuple]]
- :pos [-343 328]
+ :pos [-457 308]
  }}
  :scale 1
  :scroll [0 0]}}
