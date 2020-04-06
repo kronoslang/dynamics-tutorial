@@ -42,7 +42,7 @@
  :outputs []
  :parsed [:comment "## Next, let's compress! ##\n\nYou can find several compressor implementations on the tabs of this workspace:\n\n\n- [Basic](#1)\n- [Attack and Release](#2)\n- [Decibel Slew](#3)\n- [\"Analog\"](#4)"]
  :pos [-450 261]
- :selected true}
+ }
  "3ggdmd5nx6f5bt0" 
 {:color 2
  :inputs ["sig"]
