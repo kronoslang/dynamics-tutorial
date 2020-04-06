@@ -21,13 +21,13 @@
  :outputs [""]
  :parsed [:fn "dB-Slew" [:tuple [:free-var "sig"] [:free-var "attack"] [:free-var "release"]]]
  :pos [70 66]
- }
+ :selected true}
  "b1193sgogopnf41" 
 {:inputs []
  :label "-50 -o- 0"
  :name "threshold"
  :outputs [""]
- :parsed [:widget "beztq8" 0.6576189313616071 {:type :slider, :limits [[:float "-50"] [:float "0"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :parsed [:widget "beztq8" 0.60047607421875 {:type :slider, :limits [[:float "-50"] [:float "0"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
  :pos [-404 -196]
  }
  "bs06q3tmi67q4sq" 
@@ -64,14 +64,14 @@
 {:inputs []
  :label "6 -o- 2000"
  :outputs [""]
- :parsed [:widget "pxjgs" 1 {:type :slider, :limits [[:float "6"] [:float "2000"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :parsed [:widget "pxjgs" 0.8861903599330357 {:type :slider, :limits [[:float "6"] [:float "2000"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
  :pos [-48 -331]
  }
  "l89rjh5fm3q8cqb" 
 {:inputs []
  :label "6 -o- 100"
  :outputs [""]
- :parsed [:widget "-eaf6r9" 0.1861903599330357 {:type :slider, :limits [[:float "6"] [:float "100"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :parsed [:widget "-eaf6r9" 0.3219046456473214 {:type :slider, :limits [[:float "6"] [:float "100"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
  :pos [101 -331]
  }
  "sh586ajnd60h2yu" 

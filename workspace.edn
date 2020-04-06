@@ -1,6 +1,6 @@
 {:assets 
 {"assets/drums_dry.wav" :bundled}
- :current-tab 6
+ :current-tab 3
  
  :manifest 
 {:dependencies 
@@ -11,4 +11,4 @@
  :url "https://kronoslang.io"
  :version "0.1"}
  :name "dynamics-tutorial"
- :tabs ("tabs/Attenuation.initial.edn" "tabs/From-dB.niz8xti8x7dks6q.edn" "tabs/Test-Drums.e4nd6p2h9wvlmm6.edn" "tabs/Simple-Compressor.3nse16v9u7um7uz.edn" "tabs/Attack-Release-Compressor.akwctt1u200u8dr.edn" "tabs/db-Slew-Compressor.e1jdun79v05wxbw.edn" "tabs/dB-Slew.ec3dyf78zyec8c.edn")}
+ :tabs ("tabs/Attenuation.initial.edn" "tabs/From-dB.niz8xti8x7dks6q.edn" "tabs/Test-Drums.e4nd6p2h9wvlmm6.edn" "tabs/Simple-Compressor.3nse16v9u7um7uz.edn" "tabs/Lag.wdvx9bcwp839fvf.edn" "tabs/Attack-Release-Compressor.akwctt1u200u8dr.edn" "tabs/db-Slew-Compressor.e1jdun79v05wxbw.edn" "tabs/dB-Slew.ec3dyf78zyec8c.edn")}

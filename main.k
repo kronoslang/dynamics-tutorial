@@ -47,12 +47,25 @@ Simple-Compressor() {
 (nq8prjlc1b7l2i6q-0) = Test-Drums()
 (nglpro485l3w7vt5-0) = 0.675
 (n5mcstichevt59el-0) = Attenuation(nq8prjlc1b7l2i6q-0 nm2lcjs8hnfz9efw-0 nyw9qsy1a948rsq-0)
-(nvnz3ke7gp4x8s88-0) = Filter:Lpf6(n5mcstichevt59el-0 nsq62nydi5e3dw94-0)
-(n3klnz203x9fs42u-0) = (nq8prjlc1b7l2i6q-0 * nvnz3ke7gp4x8s88-0 * n7zvuy3clb9jjzjo-0)
-(nsq62nydi5e3dw94-0) = 0.3219046456473214
+(n2j3v231m0jk3thv-0) = Lag(n5mcstichevt59el-0 ny9740b8ps8vevpz-0)
+(n3klnz203x9fs42u-0) = (nq8prjlc1b7l2i6q-0 * n2j3v231m0jk3thv-0 * n7zvuy3clb9jjzjo-0)
 (n7zvuy3clb9jjzjo-0) = From-dB(nglpro485l3w7vt5-0)
+(ny9740b8ps8vevpz-0) = 0.5
 (nyw9qsy1a948rsq-0) = 1
 nls8ze754hvnf3jy-0
+}
+
+Lag(sig lag) {
+(n5u1eia7mrlls2pz-0) = 0.1
+(n20vvfwt1133zuzv-0) = (1 / n8pln4f9pwar3smh-0)
+(n46jln4bd6mrx7i0-0) = z-1(n4guc51ebvdgnc7n-0)
+(n8pln4f9pwar3smh-0) = (nznj1vwhzi2tf3ti-1 * n8vocxm6x1nhv0a8-0)
+(nznj1vwhzi2tf3ti-0 nznj1vwhzi2tf3ti-1) = arg
+(na5ybmn5ie80pddl-0) = Math:Pow(n5u1eia7mrlls2pz-0 n20vvfwt1133zuzv-0)
+(n4guc51ebvdgnc7n-0) = Math:Mix(na5ybmn5ie80pddl-0 nznj1vwhzi2tf3ti-0 n46jln4bd6mrx7i0-0)
+(n8vocxm6x1nhv0a8-0) = Rate-of(nznj1vwhzi2tf3ti-0)
+(nvc8uu0zno3g1i8q-0) = n4guc51ebvdgnc7n-0
+nvc8uu0zno3g1i8q-0
 }
 
 Attack-Release-Compressor() {
@@ -75,10 +88,10 @@ nvb16nu2as4otajy-0
 }
 
 db-Slew-Compressor() {
-(nhv06346n1a92e71-0) = 1
-(nb1193sgogopnf41-0) = 0.6576189313616071
+(nhv06346n1a92e71-0) = 0.8861903599330357
+(nb1193sgogopnf41-0) = 0.60047607421875
 (nttlq0ohiwatp9eg-0) = Test-Drums()
-(nl89rjh5fm3q8cqb-0) = 0.1861903599330357
+(nl89rjh5fm3q8cqb-0) = 0.3219046456473214
 (n7xq5zbitvoledge-0) = dB-Slew(ngmcunb6iaaxovf-0 nhv06346n1a92e71-0 nl89rjh5fm3q8cqb-0)
 (neo4ea7389vlo2t1-0) = Math:Log10(n7xq5zbitvoledge-0)
 (ntqb2r81bbft58iy-0) = 0.74
@@ -88,19 +101,19 @@ neo4ea7389vlo2t1-0
 
 dB-Slew(sig attack release) {
 (nzdkxt6e27u089mq-0) = Neg(n7mhgtrisbvjfv4y-1)
+(n6nh73tou2ghh4ud-0) = #1
 (n4nmc6ki4ccks4zf-0) = Rate-of(n7mhgtrisbvjfv4y-0)
-(n8ncgoj7jyak4xnf-0) = From-dB(nzdkxt6e27u089mq-0)
-(ng469j15y976uhbg-0) = From-dB(n7mhgtrisbvjfv4y-2)
+(n8ncgoj7jyak4xnf-0) = From-dB(ngebmx72aj9tc3t5-0)
+(ng469j15y976uhbg-0) = From-dB(n70obqbj879qogg1-0)
 (nlox0rpf07sy1sd-0) = z-1(ndie6ho2p1w0kk0-0 njqv1yng9qgl2rmp-0)
+(n70obqbj879qogg1-0) = (n7mhgtrisbvjfv4y-2 / n4nmc6ki4ccks4zf-0)
 (njqv1yng9qgl2rmp-0) = Math:Clamp(n7mhgtrisbvjfv4y-0 nqv7gqqk2pnqr04y-0 nto6dhmf9g9rup39-0)
-(nqv7gqqk2pnqr04y-0) = (nlox0rpf07sy1sd-0 * n8dwbsuqq8q5jm89-0)
-(ndie6ho2p1w0kk0-0) = Coerce(n7mhgtrisbvjfv4y-0 #1)
-(nyav0jy1bzk3h9rh-0) = Math:Pow(ng469j15y976uhbg-0 nbhteghafu42hubb-0)
-(nto6dhmf9g9rup39-0) = (nlox0rpf07sy1sd-0 * nyav0jy1bzk3h9rh-0)
+(nqv7gqqk2pnqr04y-0) = (nlox0rpf07sy1sd-0 * n8ncgoj7jyak4xnf-0)
+(ndie6ho2p1w0kk0-0) = Coerce(n7mhgtrisbvjfv4y-0 n6nh73tou2ghh4ud-0)
+(nto6dhmf9g9rup39-0) = (nlox0rpf07sy1sd-0 * ng469j15y976uhbg-0)
 (n8wml674pug153r8-0) = njqv1yng9qgl2rmp-0
-(nbhteghafu42hubb-0) = (1 / n4nmc6ki4ccks4zf-0)
 (n7mhgtrisbvjfv4y-0 n7mhgtrisbvjfv4y-1 n7mhgtrisbvjfv4y-2) = arg
-(n8dwbsuqq8q5jm89-0) = Math:Pow(n8ncgoj7jyak4xnf-0 nbhteghafu42hubb-0)
+(ngebmx72aj9tc3t5-0) = (nzdkxt6e27u089mq-0 / n4nmc6ki4ccks4zf-0)
 n8wml674pug153r8-0
 }
 
