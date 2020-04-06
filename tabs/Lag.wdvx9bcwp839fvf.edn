@@ -64,7 +64,7 @@
  :label ";# Lag Circuit #\n\n\nThis circuit slows the incoming signal down so that  the output tracks 97% towards input in `lag` seconds."
  :outputs []
  :parsed [:comment "# Lag Circuit #\n\n\nThis circuit slows the incoming signal down so that  the output tracks 97% towards input in `lag` seconds."]
- :pos [-23 -347]
+ :pos [17 -314]
  }
  "8pln4f9pwar3smh" 
 {:cable-midpoints 

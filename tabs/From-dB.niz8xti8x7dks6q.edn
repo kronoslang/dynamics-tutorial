@@ -12,16 +12,28 @@
  :label "/ 20"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "/" [:float "20"]]
- :pos [-66 -113]}
+ :pos [-51 58]
+ }
  "mq5wpf10q1ls2rc" 
 {:inputs []
  :label "db = arg"
  :outputs ["db"]
  :parsed "arg"
- :pos [-190 -113]}
+ :pos [-175 58]
+ }
  "te4zfibrqjcug78" 
 {:inputs ["b"]
  :label "Math:Pow(10 $b)"
  :outputs [""]
  :parsed [:fn "Math:Pow" [:tuple [:float "10"] [:free-var "b"]]]
- :pos [100 -113]}}}}
+ :pos [115 58]
+ }
+ "yjtw4mmy3cjjblj" 
+{:inputs []
+ :label "; # Decibels to Gain Coefficient #\n\n\nThis function computes the decibel to linear formula of 10^(dB/20)"
+ :outputs []
+ :parsed [:comment "# Decibels to Gain Coefficient #\n\n\nThis function computes the decibel to linear formula of 10^(dB/20)"]
+ :pos [-16 -154]
+ }}
+ :scale 1
+ :scroll [0 0]}}

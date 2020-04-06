@@ -9,19 +9,7 @@ Brief() {
 ;; Demonstrates building compressors from scratch!
  nil
 }
-Attenuation(sig threshold ratio) {
-;; Compute target attenuation for a compressor with `threshold` in decibels and `ratio` of compression above that.
-(n93p23qamoh51jtf-0) = (n2bpq6svrjgg3znp-0 * nhyg12117s52k40-0)
-(n2bpq6svrjgg3znp-0 n2bpq6svrjgg3znp-1 n2bpq6svrjgg3znp-2) = arg
-(nfa0a7t9s170x6x5-0) = Math:Pow(nelgatoh357b7rw3-0 n2j26d4aj9g61ju1-0)
-(n2j26d4aj9g61ju1-0) = (nje5482cvqp1gt7v-0 - 1)
-(n2y3ehl7r9byde53-0) = Abs(n93p23qamoh51jtf-0)
-(nelgatoh357b7rw3-0) = Max(1 n2y3ehl7r9byde53-0)
-(nhyg12117s52k40-0) = (1 / n9liu2nde1mmbdmy-0)
-(n9liu2nde1mmbdmy-0) = From-dB(n2bpq6svrjgg3znp-1)
-(nje5482cvqp1gt7v-0) = (1 / n2bpq6svrjgg3znp-2)
-nfa0a7t9s170x6x5-0
-}
+
 
 Simple-Compressor() {
 (nm2lcjs8hnfz9efw-0) = 0.1861903599330357
@@ -55,18 +43,57 @@ n7aven0mzg32jp9k-0
 }
 
 Slew-Compressor() {
-(nhv06346n1a92e71-0) = 0.8861903599330357
+(nhv06346n1a92e71-0) = 0.40761893136160715
 (nsh586ajnd60h2yu-0) = nbs06q3tmi67q4sq-0
 (nbs06q3tmi67q4sq-0) = (nttlq0ohiwatp9eg-0 * n7xq5zbitvoledge-0 * ne4z2uau96ybnkz7-0)
 (ne4z2uau96ybnkz7-0) = From-dB(nsku1e1r55nwj5be-0)
-(nsku1e1r55nwj5be-0) = 0.4449999999999999
-(nb1193sgogopnf41-0) = 0.60047607421875
+(nsku1e1r55nwj5be-0) = 0.5399999999999999
+(nb1193sgogopnf41-0) = 0.5076189313616072
 (nttlq0ohiwatp9eg-0) = Test-Drums()
-(nl89rjh5fm3q8cqb-0) = 0.3219046456473214
+(nl89rjh5fm3q8cqb-0) = 0.6790475027901786
 (n7xq5zbitvoledge-0) = dB-Slew(ngmcunb6iaaxovf-0 nhv06346n1a92e71-0 nl89rjh5fm3q8cqb-0)
 (ntqb2r81bbft58iy-0) = 0.74
 (ngmcunb6iaaxovf-0) = Attenuation(nttlq0ohiwatp9eg-0 nb1193sgogopnf41-0 ntqb2r81bbft58iy-0)
 nsh586ajnd60h2yu-0
+}
+
+Analog-Compressor() {
+(n5r09ppsh94f1z6r-0) = 8
+(n4z4wza7iqte71e-0) = 0.39619053431919643
+(nw4o4ic4ohhp52t5-0) = Algorithm:Choose(nr7r6qbb4k07ji40-0 ncws4z6gl25m340x-0 n4z4wza7iqte71e-0)
+(nvljn8mjdjmonyep-0) = Approx:Tanh(n5lwab81th6tl54q-0)
+(n6yx9ih8vz8fmahz-0) = (n50t3kl4b5phwccq-0 * n50t3kl4b5phwccq-0 * n50t3kl4b5phwccq-0 * nl77a48d59e0s4po-0)
+(n9hbaz313lyp1o5e-0) = Filter:Lpf6(n6yx9ih8vz8fmahz-0 n5r09ppsh94f1z6r-0)
+(ncws4z6gl25m340x-0) = 0.6390476771763393
+(nr7r6qbb4k07ji40-0) = Control:Edge-(ndldc5etdshyahsl-0)
+(np6ge203dacesc3g-0) = From-dB(nvhe7alru78q9nyj-0)
+(n90h3ka7sb22p2l1-0) = 1
+(no9v2kcse9cn1lp3-0) = Filter:DC(nvljn8mjdjmonyep-0)
+(n5lwab81th6tl54q-0) = (nvrc7yqilbbwq6j-0 + n9hbaz313lyp1o5e-0)
+(nvrc7yqilbbwq6j-0) = (npcf553s43pp36cy-0 * n2ut8qee3q428b6q-0 * np6ge203dacesc3g-0)
+(n2ut8qee3q428b6q-0) = Lag(ndldc5etdshyahsl-0 nw4o4ic4ohhp52t5-0)
+(nl77a48d59e0s4po-0) = 0.3
+(nubi6e425okqjrpr-0) = no9v2kcse9cn1lp3-0
+(n50t3kl4b5phwccq-0) = (1 - n2ut8qee3q428b6q-0)
+(npcf553s43pp36cy-0) = Test-Drums()
+(n9s8zl9td54edudh-0) = 0.2533333914620536
+(nvhe7alru78q9nyj-0) = 0.975
+(ndldc5etdshyahsl-0) = Attenuation(npcf553s43pp36cy-0 n9s8zl9td54edudh-0 n90h3ka7sb22p2l1-0)
+nubi6e425okqjrpr-0
+}
+
+Attenuation(sig threshold ratio) {
+;; Compute target attenuation for a compressor with `threshold` in decibels and `ratio` of compression above that.
+(n93p23qamoh51jtf-0) = (n2bpq6svrjgg3znp-0 * nhyg12117s52k40-0)
+(n2bpq6svrjgg3znp-0 n2bpq6svrjgg3znp-1 n2bpq6svrjgg3znp-2) = arg
+(nfa0a7t9s170x6x5-0) = Math:Pow(nelgatoh357b7rw3-0 n2j26d4aj9g61ju1-0)
+(n2j26d4aj9g61ju1-0) = (nje5482cvqp1gt7v-0 - 1)
+(n2y3ehl7r9byde53-0) = Abs(n93p23qamoh51jtf-0)
+(nelgatoh357b7rw3-0) = Max(1 n2y3ehl7r9byde53-0)
+(nhyg12117s52k40-0) = (1 / n9liu2nde1mmbdmy-0)
+(n9liu2nde1mmbdmy-0) = From-dB(n2bpq6svrjgg3znp-1)
+(nje5482cvqp1gt7v-0) = (1 / n2bpq6svrjgg3znp-2)
+nfa0a7t9s170x6x5-0
 }
 
 dB-Slew(sig attack release) {

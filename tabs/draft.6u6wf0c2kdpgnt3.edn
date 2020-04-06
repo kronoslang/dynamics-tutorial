@@ -1,0 +1,70 @@
+{
+ :identity "6u6wf0c2kdpgnt3"
+ :patch
+{:cables
+{["1kl3isjg4eafos5" 0] [:fixed "7tv72pamz5dga77" 0]
+ ["1kl3isjg4eafos5" 1] [:fixed "q51345cetjsmz56" 0]
+ ["3ggdmd5nx6f5bt0" 0] [:fixed "1kl3isjg4eafos5" 0]
+ ["7tv72pamz5dga77" 0] [:fixed "6e997c12xb5bvad" 0]
+ ["q51345cetjsmz56" 0] [:fixed "7tv72pamz5dga77" 0]
+ ["q51345cetjsmz56" 1] [:fixed "9f15lx6szv3claq" 0]
+ ["q51345cetjsmz56" 2] [:fixed "3jp8rjjk2jgc3oo" 0]}
+ :nodes
+{"1kl3isjg4eafos5" 
+{:inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [-145 -95]
+ }
+ "3ggdmd5nx6f5bt0" 
+{:inputs ["sig"]
+ :label "o))"
+ :outputs ["thru"]
+ :parsed [:playback [:free-var "sig"]]
+ :pos [-34 -96]
+ }
+ "3jp8rjjk2jgc3oo" 
+{:inputs []
+ :label "1 -o- 8"
+ :name "ratio"
+ :outputs [""]
+ :parsed [:widget "e07msk" 0.5 {:type :slider, :limits [[:float "1"] [:float "8"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :pos [-320 -461]
+ }
+ "6e997c12xb5bvad" 
+{:inputs []
+ :label "0.5"
+ :outputs [""]
+ :parsed [:float "0.5"]
+ :pos [-713 -195]
+ }
+ "7tv72pamz5dga77" 
+{:inputs ["freq"]
+ :label "Gen:Phasor($freq)"
+ :outputs [""]
+ :parsed [:fn "Gen:Phasor" [:tuple [:free-var "freq"]]]
+ :pos [-590 -195]
+ }
+ "9f15lx6szv3claq" 
+{:inputs []
+ :label "-24 -o- 0"
+ :name "threshold"
+ :outputs [""]
+ :parsed [:widget "ifzzj6" 0.5 {:type :slider, :limits [[:float "-24"] [:float "0"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :pos [-416 -461]
+ }
+ "cdj3cfrkd34l565" 
+{:inputs []
+ :label ";# Welcome to the Compressor Tutorial! #\n\n\nThis workspace demonstrates several kinds of digital compressors built from first principles."
+ :outputs []
+ :parsed [:comment "# Welcome to the Compressor Tutorial! #\n\n\nThis workspace demonstrates several kinds of digital compressors built from first principles."]
+ :pos [-693 -559]
+ }
+ "q51345cetjsmz56" 
+{:inputs ["sig" "threshold" "ratio"]
+ :label "Attenuation($sig $threshold $ratio)"
+ :outputs [""]
+ :parsed [:fn "Attenuation" [:tuple [:free-var "sig"] [:free-var "threshold"] [:free-var "ratio"]]]
+ :pos [-264 -189]
+ }}}}

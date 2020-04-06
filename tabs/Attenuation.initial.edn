@@ -20,55 +20,108 @@
  :label "(sig threshold ratio) = arg"
  :outputs ["sig" "threshold" "ratio"]
  :parsed "arg"
- :pos [-384 -81]}
+ :pos [-381 118]
+ }
  "2j26d4aj9g61ju1" 
-{:inputs ["a"]
+{:color 3
+ :inputs ["a"]
  :label "- 1"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "-" [:float "1"]]
- :pos [178 14]}
+ :pos [181 213]
+ }
  "2y3ehl7r9byde53" 
 {:inputs ["a"]
  :label "Abs($a)"
  :outputs [""]
  :parsed [:fn "Abs" [:tuple [:free-var "a"]]]
- :pos [78 -90]}
+ :pos [81 109]
+ }
+ "8qdzu0btnxtb2wq" 
+{:color 3
+ :inputs []
+ :label "; The *gain factor* can be computed by dividing the target gain by the source gain.\n\n\nBecause we are already computing a power of the source gain, the division can be done by just decrementing the exponent."
+ :outputs []
+ :parsed [:comment "The *gain factor* can be computed by dividing the target gain by the source gain.\n\n\nBecause we are already computing a power of the source gain, the division can be done by just decrementing the exponent."]
+ :pos [221 276]
+ }
  "93p23qamoh51jtf" 
-{:inputs ["a" "b" "more..."]
+{:color 2
+ :inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [-17 -90]}
+ :pos [-14 109]
+ }
  "9liu2nde1mmbdmy" 
-{:inputs ["db"]
+{:color 2
+ :inputs ["db"]
  :label "From-dB($db)"
  :outputs [""]
  :parsed [:fn "From-dB" [:tuple [:free-var "db"]]]
- :pos [-251 -170]}
+ :pos [-248 29]
+ }
+ "a3zbb1zbv22d99i" 
+{:inputs []
+ :label "; We ignore the sign of the source amplitude by taking the absolute value, and clamp all levels below 1 (0dB) so that the attenuator only reacts above the threshold."
+ :outputs []
+ :parsed [:comment "We ignore the sign of the source amplitude by taking the absolute value, and clamp all levels below 1 (0dB) so that the attenuator only reacts above the threshold."]
+ :pos [239 -67]
+ }
+ "ap6mcudm9ve4epx" 
+{:color 3
+ :inputs []
+ :label "; The decibel scale is *logarithmic*. Therefore we can implement *division* on the logarithmic scale by taking a *fractional power*."
+ :outputs []
+ :parsed [:comment "The decibel scale is *logarithmic*. Therefore we can implement *division* on the logarithmic scale by taking a *fractional power*."]
+ :pos [-242 276]
+ }
  "elgatoh357b7rw3" 
 {:inputs ["b"]
  :label "Max(1 $b)"
  :outputs [""]
  :parsed [:fn "Max" [:tuple [:float "1"] [:free-var "b"]]]
- :pos [223 -90]}
+ :pos [226 109]
+ }
  "fa0a7t9s170x6x5" 
-{:flip-y true
+{:color 3
+ :flip-y true
  :inputs ["a" "b"]
  :label "Math:Pow($a $b)"
  :outputs [""]
  :parsed [:fn "Math:Pow" [:tuple [:free-var "a"] [:free-var "b"]]]
- :pos [398 -66]}
+ :pos [401 133]
+ }
  "hyg12117s52k40" 
-{:inputs ["b"]
+{:color 2
+ :inputs ["b"]
  :label "1 /"
  :outputs [""]
  :parsed [:infix [:float "1"] "/" [:free-var "b"]]
- :pos [-104 -170]}
+ :pos [-101 29]
+ }
  "je5482cvqp1gt7v" 
-{:inputs ["b"]
+{:color 3
+ :inputs ["b"]
  :label "1 /"
  :outputs [""]
  :parsed [:infix [:float "1"] "/" [:free-var "b"]]
- :pos [-122 14]}}
+ :pos [-119 213]
+ }
+ "jw2l5c27imqpcmv" 
+{:inputs []
+ :label ";# Computing Compressor Attenuation Target #\n\n\nThe basic idea of compression is to reduce the peaks in the audio signal above a `threshold` by a *compression ratio* specified in decibels."
+ :outputs []
+ :parsed [:comment "# Computing Compressor Attenuation Target #\n\n\nThe basic idea of compression is to reduce the peaks in the audio signal above a `threshold` by a *compression ratio* specified in decibels."]
+ :pos [-285 -423]
+ }
+ "k72xt7eebb6ccnv" 
+{:color 2
+ :inputs []
+ :label "; We specify the compressor threshold at 0dB or the linear amplitude of 1. Variable threshold can be achieved by adding a gain stage at the input."
+ :outputs []
+ :parsed [:comment "We specify the compressor threshold at 0dB or the linear amplitude of 1. Variable threshold can be achieved by adding a gain stage at the input."]
+ :pos [-210 -123]
+ }}
  :scale 1
  :scroll [0 0]}}

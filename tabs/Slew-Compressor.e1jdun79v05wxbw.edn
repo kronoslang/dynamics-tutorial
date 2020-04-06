@@ -19,7 +19,7 @@
  :label ";# Slew Compressor #\n\n\nAn alternative means of representing compressor attack and release is to specify them in terms of how rapidly the attenuation can increase or decrease.\n\n\nThis circuit presents `attack` and `release` in terms of decibels per second."
  :outputs []
  :parsed [:comment "# Slew Compressor #\n\n\nAn alternative means of representing compressor attack and release is to specify them in terms of how rapidly the attenuation can increase or decrease.\n\n\nThis circuit presents `attack` and `release` in terms of decibels per second."]
- :pos [-200 -443]
+ :pos [-349 -367]
  }
  "7xq5zbitvoledge" 
 {:color 4
@@ -28,7 +28,7 @@
  :name "slew limiter"
  :outputs [""]
  :parsed [:fn "dB-Slew" [:tuple [:free-var "sig"] [:free-var "attack"] [:free-var "release"]]]
- :pos [159 154]
+ :pos [223 199]
  }
  "b1193sgogopnf41" 
 {:color 3
@@ -36,8 +36,8 @@
  :label "-50 -o- 0"
  :name "threshold"
  :outputs [""]
- :parsed [:widget "-7mq1ce" 0.60047607421875 {:type :slider, :limits [[:float "-50"] [:float "0"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
- :pos [-276 -165]
+ :parsed [:widget "-7mq1ce" 0.5076189313616072 {:type :slider, :limits [[:float "-50"] [:float "0"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :pos [-243 -88]
  }
  "bs06q3tmi67q4sq" 
 {:ephemeral-inputs #{"more"}
@@ -45,22 +45,22 @@
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more..."]]
- :pos [307 257]
+ :pos [371 302]
  }
  "e0m0vbrlw2qp7zq" 
 {:color 4
  :inputs []
- :label "; The lag circuit is implemented as a decibel slew limiter on [this tab](#4)"
+ :label "; The lag circuit is implemented as a decibel slew limiter on [this tab](#6)"
  :outputs []
- :parsed [:comment "The lag circuit is implemented as a decibel slew limiter on [this tab](#4)"]
- :pos [45 222]
- }
+ :parsed [:comment "The lag circuit is implemented as a decibel slew limiter on [this tab](#6)"]
+ :pos [-43 361]
+ :selected true}
  "e4z2uau96ybnkz7" 
 {:inputs ["db"]
  :label "From-dB($db)"
  :outputs [""]
  :parsed [:fn "From-dB" [:tuple [:free-var "db"]]]
- :pos [300 52]
+ :pos [333 129]
  }
  "gmcunb6iaaxovf" 
 {:inputs ["sig" "threshold" "ratio"]
@@ -68,7 +68,7 @@
  :name "find gain target"
  :outputs [""]
  :parsed [:fn "Attenuation" [:tuple [:free-var "sig"] [:free-var "threshold"] [:free-var "ratio"]]]
- :pos [-45 154]
+ :pos [19 199]
  }
  "hv06346n1a92e71" 
 {:color 3
@@ -76,8 +76,8 @@
  :label "6 -o- 2000"
  :name "attack dB/s"
  :outputs [""]
- :parsed [:widget "aawmd" 0.8861903599330357 {:type :slider, :limits [[:float "6"] [:float "2000"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
- :pos [-8 -165]
+ :parsed [:widget "aawmd" 0.40761893136160715 {:type :slider, :limits [[:float "6"] [:float "2000"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :pos [25 -88]
  }
  "l89rjh5fm3q8cqb" 
 {:color 3
@@ -85,25 +85,26 @@
  :label "6 -o- 100"
  :name "release dB/s"
  :outputs [""]
- :parsed [:widget "-50r395" 0.3219046456473214 {:type :slider, :limits [[:float "6"] [:float "100"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
- :pos [97 -165]
+ :parsed [:widget "-50r395" 0.6790475027901786 {:type :slider, :limits [[:float "6"] [:float "100"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :pos [130 -88]
  }
  "sh586ajnd60h2yu" 
 {:cable-midpoints 
-{0 [-32 127]}
+{0 [-75 114]}
  :inputs ["sig"]
  :label "o))"
  :outputs ["thru"]
  :parsed [:playback [:free-var "sig"]]
- :pos [155 327]
+ :pos [219 372]
  }
  "sku1e1r55nwj5be" 
 {:color 3
  :inputs []
  :label "-24 .o 24"
+ :name "makeup gain"
  :outputs [""]
- :parsed [:widget "-26ikzc" 0.4449999999999999 {:type :dial, :skin :circular, :min [:float "-24"], :max [:float "24"]}]
- :pos [191 -165]
+ :parsed [:widget "-26ikzc" 0.5399999999999999 {:type :dial, :skin :circular, :min [:float "-24"], :max [:float "24"]}]
+ :pos [224 -88]
  }
  "tqb2r81bbft58iy" 
 {:color 3
@@ -112,14 +113,14 @@
  :name "ratio"
  :outputs [""]
  :parsed [:widget "-kcgzo7" 0.74 {:type :dial, :skin :circular, :min [:float "1"], :max [:float "8"]}]
- :pos [-160 -165]
+ :pos [-127 -88]
  }
  "ttlq0ohiwatp9eg" 
 {:inputs []
  :label "Test-Drums()"
  :outputs [""]
  :parsed [:fn "Test-Drums" [:tuple]]
- :pos [-280 257]
+ :pos [-216 302]
  }}
  :scale 1
  :scroll [0 0]}}
