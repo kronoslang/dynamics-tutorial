@@ -26,9 +26,9 @@
  "2ffi7eeqbu0xccn" 
 {:color 3
  :inputs []
- :label "; We compute per-sample rate of approach (lag coefficient) by translating `lag` from seconds to samples (N), and taking the N:th root of 0.1 (the relative error permitted after `lag` seconds)."
+ :label "; We compute per-sample rate of approach (lag coefficient) by translating `lag` from seconds to samples (N), and taking the N:th root of 0.03 (the relative error of 3% permitted after `lag` seconds)."
  :outputs []
- :parsed [:comment "We compute per-sample rate of approach (lag coefficient) by translating `lag` from seconds to samples (N), and taking the N:th root of 0.1 (the relative error permitted after `lag` seconds)."]
+ :parsed [:comment "We compute per-sample rate of approach (lag coefficient) by translating `lag` from seconds to samples (N), and taking the N:th root of 0.03 (the relative error of 3% permitted after `lag` seconds)."]
  :pos [-192 143]
  }
  "46jln4bd6mrx7i0" 
@@ -54,16 +54,16 @@
  "5u1eia7mrlls2pz" 
 {:color 3
  :inputs []
- :label "0.1"
+ :label "0.03"
  :outputs [""]
- :parsed [:float "0.1"]
+ :parsed [:float "0.03"]
  :pos [-81 90]
  }
  "8o6bl46ta334fvd" 
 {:inputs []
- :label ";# Lag Circuit #\n\n\nThis circuit slows the incoming signal down so that  the output tracks 90% towards input in `lag` seconds."
+ :label ";# Lag Circuit #\n\n\nThis circuit slows the incoming signal down so that  the output tracks 97% towards input in `lag` seconds."
  :outputs []
- :parsed [:comment "# Lag Circuit #\n\n\nThis circuit slows the incoming signal down so that  the output tracks 90% towards input in `lag` seconds."]
+ :parsed [:comment "# Lag Circuit #\n\n\nThis circuit slows the incoming signal down so that  the output tracks 97% towards input in `lag` seconds."]
  :pos [-23 -347]
  }
  "8pln4f9pwar3smh" 

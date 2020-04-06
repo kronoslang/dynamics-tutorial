@@ -1,0 +1,125 @@
+{:identifier "Slew-Compressor"
+ :identity "e1jdun79v05wxbw"
+ :patch
+{:cables
+{["7xq5zbitvoledge" 0] [:fixed "gmcunb6iaaxovf" 0]
+ ["7xq5zbitvoledge" 1] [:fixed "hv06346n1a92e71" 0]
+ ["7xq5zbitvoledge" 2] [:fixed "l89rjh5fm3q8cqb" 0]
+ ["bs06q3tmi67q4sq" 0] [:fixed "ttlq0ohiwatp9eg" 0]
+ ["bs06q3tmi67q4sq" 1] [:fixed "7xq5zbitvoledge" 0]
+ ["bs06q3tmi67q4sq" 2] [:fixed "e4z2uau96ybnkz7" 0]
+ ["e4z2uau96ybnkz7" 0] [:fixed "sku1e1r55nwj5be" 0]
+ ["gmcunb6iaaxovf" 0] [:fixed "ttlq0ohiwatp9eg" 0]
+ ["gmcunb6iaaxovf" 1] [:fixed "b1193sgogopnf41" 0]
+ ["gmcunb6iaaxovf" 2] [:fixed "tqb2r81bbft58iy" 0]
+ ["sh586ajnd60h2yu" 0] [:fixed "bs06q3tmi67q4sq" 0]}
+ :nodes
+{"54pdh9e0bjcd20i" 
+{:inputs []
+ :label ";# Slew Compressor #\n\n\nAn alternative means of representing compressor attack and release is to specify them in terms of how rapidly the attenuation can increase or decrease.\n\n\nThis circuit presents `attack` and `release` in terms of decibels per second."
+ :outputs []
+ :parsed [:comment "# Slew Compressor #\n\n\nAn alternative means of representing compressor attack and release is to specify them in terms of how rapidly the attenuation can increase or decrease.\n\n\nThis circuit presents `attack` and `release` in terms of decibels per second."]
+ :pos [-200 -443]
+ }
+ "7xq5zbitvoledge" 
+{:color 4
+ :inputs ["sig" "attack" "release"]
+ :label "dB-Slew($sig $attack $release)"
+ :name "slew limiter"
+ :outputs [""]
+ :parsed [:fn "dB-Slew" [:tuple [:free-var "sig"] [:free-var "attack"] [:free-var "release"]]]
+ :pos [159 154]
+ }
+ "b1193sgogopnf41" 
+{:color 3
+ :inputs []
+ :label "-50 -o- 0"
+ :name "threshold"
+ :outputs [""]
+ :parsed [:widget "-7mq1ce" 0.60047607421875 {:type :slider, :limits [[:float "-50"] [:float "0"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :pos [-276 -165]
+ }
+ "bs06q3tmi67q4sq" 
+{:ephemeral-inputs #{"more"}
+ :inputs ["a" "b" "more" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more..."]]
+ :pos [307 257]
+ }
+ "e0m0vbrlw2qp7zq" 
+{:color 4
+ :inputs []
+ :label "; The lag circuit is implemented as a decibel slew limiter on [this tab](#4)"
+ :outputs []
+ :parsed [:comment "The lag circuit is implemented as a decibel slew limiter on [this tab](#4)"]
+ :pos [45 222]
+ }
+ "e4z2uau96ybnkz7" 
+{:inputs ["db"]
+ :label "From-dB($db)"
+ :outputs [""]
+ :parsed [:fn "From-dB" [:tuple [:free-var "db"]]]
+ :pos [300 52]
+ }
+ "gmcunb6iaaxovf" 
+{:inputs ["sig" "threshold" "ratio"]
+ :label "Attenuation($sig $threshold $ratio)"
+ :name "find gain target"
+ :outputs [""]
+ :parsed [:fn "Attenuation" [:tuple [:free-var "sig"] [:free-var "threshold"] [:free-var "ratio"]]]
+ :pos [-45 154]
+ }
+ "hv06346n1a92e71" 
+{:color 3
+ :inputs []
+ :label "6 -o- 2000"
+ :name "attack dB/s"
+ :outputs [""]
+ :parsed [:widget "aawmd" 0.8861903599330357 {:type :slider, :limits [[:float "6"] [:float "2000"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :pos [-8 -165]
+ }
+ "l89rjh5fm3q8cqb" 
+{:color 3
+ :inputs []
+ :label "6 -o- 100"
+ :name "release dB/s"
+ :outputs [""]
+ :parsed [:widget "-50r395" 0.3219046456473214 {:type :slider, :limits [[:float "6"] [:float "100"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :pos [97 -165]
+ }
+ "sh586ajnd60h2yu" 
+{:cable-midpoints 
+{0 [-32 127]}
+ :inputs ["sig"]
+ :label "o))"
+ :outputs ["thru"]
+ :parsed [:playback [:free-var "sig"]]
+ :pos [155 327]
+ }
+ "sku1e1r55nwj5be" 
+{:color 3
+ :inputs []
+ :label "-24 .o 24"
+ :outputs [""]
+ :parsed [:widget "-26ikzc" 0.4449999999999999 {:type :dial, :skin :circular, :min [:float "-24"], :max [:float "24"]}]
+ :pos [191 -165]
+ }
+ "tqb2r81bbft58iy" 
+{:color 3
+ :inputs []
+ :label "1 .o 8"
+ :name "ratio"
+ :outputs [""]
+ :parsed [:widget "-kcgzo7" 0.74 {:type :dial, :skin :circular, :min [:float "1"], :max [:float "8"]}]
+ :pos [-160 -165]
+ }
+ "ttlq0ohiwatp9eg" 
+{:inputs []
+ :label "Test-Drums()"
+ :outputs [""]
+ :parsed [:fn "Test-Drums" [:tuple]]
+ :pos [-280 257]
+ }}
+ :scale 1
+ :scroll [0 0]}}

@@ -23,80 +23,50 @@ Attenuation(sig threshold ratio) {
 nfa0a7t9s170x6x5-0
 }
 
-From-dB(db) {
-;; Convert 'dB' from decibel scale to linear gain coefficient. 
-(n1kr6uaw7cmbb3dt-0) = (nmq5wpf10q1ls2rc-0 / 20)
-(nmq5wpf10q1ls2rc-0) = arg
-(nte4zfibrqjcug78-0) = Math:Pow(10 n1kr6uaw7cmbb3dt-0)
-nte4zfibrqjcug78-0
-}
-
-Test-Drums() {
-(n8f266f7rfp9x843-0) = neiwagxlbio3lbjf-0
-(nb6xcgl05paicrdv-0) = 1
-(nbdicwh6o25823el-0 nbdicwh6o25823el-1 nbdicwh6o25823el-2) = :Audio:Loop("drums_dry.wav")
-(neiwagxlbio3lbjf-0) = Eval(nbdicwh6o25823el-2 nj6cegl7sqqt3p-0 )
-(nj6cegl7sqqt3p-0) = Filter:Integrate(nyabbsl42bh07c6p-0 1)
-(nyabbsl42bh07c6p-0) = Gen:Signal(nb6xcgl05paicrdv-0)
-n8f266f7rfp9x843-0
-}
-
 Simple-Compressor() {
-(nm2lcjs8hnfz9efw-0) = 0
+(nm2lcjs8hnfz9efw-0) = 0.1861903599330357
 (nls8ze754hvnf3jy-0) = n3klnz203x9fs42u-0
 (nq8prjlc1b7l2i6q-0) = Test-Drums()
-(nglpro485l3w7vt5-0) = 0.675
+(nglpro485l3w7vt5-0) = 0.665
 (n5mcstichevt59el-0) = Attenuation(nq8prjlc1b7l2i6q-0 nm2lcjs8hnfz9efw-0 nyw9qsy1a948rsq-0)
 (n2j3v231m0jk3thv-0) = Lag(n5mcstichevt59el-0 ny9740b8ps8vevpz-0)
 (n3klnz203x9fs42u-0) = (nq8prjlc1b7l2i6q-0 * n2j3v231m0jk3thv-0 * n7zvuy3clb9jjzjo-0)
 (n7zvuy3clb9jjzjo-0) = From-dB(nglpro485l3w7vt5-0)
-(ny9740b8ps8vevpz-0) = 0.5
-(nyw9qsy1a948rsq-0) = 1
+(ny9740b8ps8vevpz-0) = 0.15761893136160715
+(nyw9qsy1a948rsq-0) = 0.6199999999999999
 nls8ze754hvnf3jy-0
 }
 
-Lag(sig lag) {
-(n5u1eia7mrlls2pz-0) = 0.1
-(n20vvfwt1133zuzv-0) = (1 / n8pln4f9pwar3smh-0)
-(n46jln4bd6mrx7i0-0) = z-1(n4guc51ebvdgnc7n-0)
-(n8pln4f9pwar3smh-0) = (nznj1vwhzi2tf3ti-1 * n8vocxm6x1nhv0a8-0)
-(nznj1vwhzi2tf3ti-0 nznj1vwhzi2tf3ti-1) = arg
-(na5ybmn5ie80pddl-0) = Math:Pow(n5u1eia7mrlls2pz-0 n20vvfwt1133zuzv-0)
-(n4guc51ebvdgnc7n-0) = Math:Mix(na5ybmn5ie80pddl-0 nznj1vwhzi2tf3ti-0 n46jln4bd6mrx7i0-0)
-(n8vocxm6x1nhv0a8-0) = Rate-of(nznj1vwhzi2tf3ti-0)
-(nvc8uu0zno3g1i8q-0) = n4guc51ebvdgnc7n-0
-nvc8uu0zno3g1i8q-0
+Compressor() {
+(nui8cg6e58ra1a7u-0) = Algorithm:Choose(naqbb59fvcpfd9r-0 nbdjiqty2l3i0mp7-0 nk1k4zj2e592kb1s-0)
+(n58x25yrkh7dchb2-0) = (nx90j9zgy8ta02vb-0 * n8ye99ampg83u7u9-0 * n6oc3k2iwxsnye4j-0)
+(n6oc3k2iwxsnye4j-0) = From-dB(n49bdcw73d1waiud-0)
+(n8ye99ampg83u7u9-0) = Lag(np1nrdpppv7qw335-0 nui8cg6e58ra1a7u-0)
+(n49bdcw73d1waiud-0) = 0.665
+(n9rntnwuwx87bu-0) = 1
+(nx90j9zgy8ta02vb-0) = Test-Drums()
+(nbdjiqty2l3i0mp7-0) = 0.5433332170758929
+(np1nrdpppv7qw335-0) = Attenuation(nx90j9zgy8ta02vb-0 nfriszr7itzq9kii-0 n9rntnwuwx87bu-0)
+(n7aven0mzg32jp9k-0) = n58x25yrkh7dchb2-0
+(naqbb59fvcpfd9r-0) = Control:Edge-(np1nrdpppv7qw335-0)
+(nfriszr7itzq9kii-0) = 0.3361903599330357
+(nk1k4zj2e592kb1s-0) = 0.40047607421875
+n7aven0mzg32jp9k-0
 }
 
-Attack-Release-Compressor() {
-(nxotuit9ix78b63u-0) = 0.3290475027901786
-(nhf6dbh2zu5dr4t6-0) = Attenuation(npyjce7lhz95nc8u-0 nxotuit9ix78b63u-0 nketdzb8cye6z4n-0)
-(nihp7hiksa3rdvn-0) = Algorithm:Choose(nsxh4y63fq8i6lyq-0 niua2u94xrbas0eg-0 nmb77s6r4nm7x42h-0)
-(nsxh4y63fq8i6lyq-0) = Control:Edge-(nhf6dbh2zu5dr4t6-0)
-(nyk0p8eztheb44ad-0) = Filter:Lpf6(nhf6dbh2zu5dr4t6-0 nihp7hiksa3rdvn-0)
-(n6m0gjz2gqot13e9-0) = Filter:Lpf6(nyk0p8eztheb44ad-0 nbfal4xcih9agep0-0)
-(niua2u94xrbas0eg-0) = 0.5933332170758928
-(nmb77s6r4nm7x42h-0) = 0
-(nvb16nu2as4otajy-0) = nbub653mr2e14cy9-0
-(n65d1f8cgjv2a6qi-0) = 0.785
-(nbfal4xcih9agep0-0) = 250
-(nzo432h2m83k72wh-0) = From-dB(n65d1f8cgjv2a6qi-0)
-(npyjce7lhz95nc8u-0) = Test-Drums()
-(nbub653mr2e14cy9-0) = (npyjce7lhz95nc8u-0 * n6m0gjz2gqot13e9-0 * nzo432h2m83k72wh-0)
-(nketdzb8cye6z4n-0) = 1
-nvb16nu2as4otajy-0
-}
-
-db-Slew-Compressor() {
+Slew-Compressor() {
 (nhv06346n1a92e71-0) = 0.8861903599330357
+(nsh586ajnd60h2yu-0) = nbs06q3tmi67q4sq-0
+(nbs06q3tmi67q4sq-0) = (nttlq0ohiwatp9eg-0 * n7xq5zbitvoledge-0 * ne4z2uau96ybnkz7-0)
+(ne4z2uau96ybnkz7-0) = From-dB(nsku1e1r55nwj5be-0)
+(nsku1e1r55nwj5be-0) = 0.4449999999999999
 (nb1193sgogopnf41-0) = 0.60047607421875
 (nttlq0ohiwatp9eg-0) = Test-Drums()
 (nl89rjh5fm3q8cqb-0) = 0.3219046456473214
 (n7xq5zbitvoledge-0) = dB-Slew(ngmcunb6iaaxovf-0 nhv06346n1a92e71-0 nl89rjh5fm3q8cqb-0)
-(neo4ea7389vlo2t1-0) = Math:Log10(n7xq5zbitvoledge-0)
 (ntqb2r81bbft58iy-0) = 0.74
 (ngmcunb6iaaxovf-0) = Attenuation(nttlq0ohiwatp9eg-0 nb1193sgogopnf41-0 ntqb2r81bbft58iy-0)
-neo4ea7389vlo2t1-0
+nsh586ajnd60h2yu-0
 }
 
 dB-Slew(sig attack release) {
@@ -115,6 +85,37 @@ dB-Slew(sig attack release) {
 (n7mhgtrisbvjfv4y-0 n7mhgtrisbvjfv4y-1 n7mhgtrisbvjfv4y-2) = arg
 (ngebmx72aj9tc3t5-0) = (nzdkxt6e27u089mq-0 / n4nmc6ki4ccks4zf-0)
 n8wml674pug153r8-0
+}
+
+Lag(sig lag) {
+(n5u1eia7mrlls2pz-0) = 0.03
+(n20vvfwt1133zuzv-0) = (1 / n8pln4f9pwar3smh-0)
+(n46jln4bd6mrx7i0-0) = z-1(n4guc51ebvdgnc7n-0)
+(n8pln4f9pwar3smh-0) = (nznj1vwhzi2tf3ti-1 * n8vocxm6x1nhv0a8-0)
+(nznj1vwhzi2tf3ti-0 nznj1vwhzi2tf3ti-1) = arg
+(na5ybmn5ie80pddl-0) = Math:Pow(n5u1eia7mrlls2pz-0 n20vvfwt1133zuzv-0)
+(n4guc51ebvdgnc7n-0) = Math:Mix(na5ybmn5ie80pddl-0 nznj1vwhzi2tf3ti-0 n46jln4bd6mrx7i0-0)
+(n8vocxm6x1nhv0a8-0) = Rate-of(nznj1vwhzi2tf3ti-0)
+(nvc8uu0zno3g1i8q-0) = n4guc51ebvdgnc7n-0
+nvc8uu0zno3g1i8q-0
+}
+
+From-dB(db) {
+;; Convert 'dB' from decibel scale to linear gain coefficient. 
+(n1kr6uaw7cmbb3dt-0) = (nmq5wpf10q1ls2rc-0 / 20)
+(nmq5wpf10q1ls2rc-0) = arg
+(nte4zfibrqjcug78-0) = Math:Pow(10 n1kr6uaw7cmbb3dt-0)
+nte4zfibrqjcug78-0
+}
+
+Test-Drums() {
+(n8f266f7rfp9x843-0) = neiwagxlbio3lbjf-0
+(nb6xcgl05paicrdv-0) = 1
+(nbdicwh6o25823el-0 nbdicwh6o25823el-1 nbdicwh6o25823el-2) = :Audio:Loop("drums_dry.wav")
+(neiwagxlbio3lbjf-0) = Eval(nbdicwh6o25823el-2 nj6cegl7sqqt3p-0 )
+(nj6cegl7sqqt3p-0) = Filter:Integrate(nyabbsl42bh07c6p-0 1)
+(nyabbsl42bh07c6p-0) = Gen:Signal(nb6xcgl05paicrdv-0)
+n8f266f7rfp9x843-0
 }
 
 }
