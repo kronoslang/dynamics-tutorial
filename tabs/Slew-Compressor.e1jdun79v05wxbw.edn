@@ -1,4 +1,16 @@
-{:identifier "Slew-Compressor"
+{:draft-argument "Test-Drums()"
+ :export 
+{:arguments 
+{"in-1" 
+{:signal-type "audio"}}
+ :export-this-tab true
+ :user-interface 
+{"attack dB/s" true
+ "makeup gain" true
+ "ratio" true
+ "release dB/s" true
+ "threshold" true}}
+ :identifier "Slew-Compressor"
  :identity "e1jdun79v05wxbw"
  :patch
 {:cables
@@ -125,10 +137,10 @@
  }
  "ttlq0ohiwatp9eg" 
 {:inputs []
- :label "Test-Drums()"
+ :label "arg"
  :outputs [""]
- :parsed [:fn "Test-Drums" [:tuple]]
+ :parsed "arg"
  :pos [-310 226]
- }}
+ :selected true}}
  :scale 1
  :scroll [0 0]}}

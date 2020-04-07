@@ -11,28 +11,29 @@ Brief() {
 }
 
 
-Simple-Compressor() {
+Simple-Compressor(sig) {
+;; Simple compressor with a single time constant setting for attack and release.
 (nm2lcjs8hnfz9efw-0) = 0.1861903599330357
 (nls8ze754hvnf3jy-0) = n3klnz203x9fs42u-0
-(nq8prjlc1b7l2i6q-0) = Test-Drums()
 (nglpro485l3w7vt5-0) = 0.665
-(n5mcstichevt59el-0) = Attenuation(nq8prjlc1b7l2i6q-0 nm2lcjs8hnfz9efw-0 nyw9qsy1a948rsq-0)
+(n5mcstichevt59el-0) = Attenuation(nx56u281lc3y3oj1-0 nm2lcjs8hnfz9efw-0 nyw9qsy1a948rsq-0)
 (n2j3v231m0jk3thv-0) = Lag(n5mcstichevt59el-0 ny9740b8ps8vevpz-0)
-(n3klnz203x9fs42u-0) = (nq8prjlc1b7l2i6q-0 * n2j3v231m0jk3thv-0 * n7zvuy3clb9jjzjo-0)
+(n3klnz203x9fs42u-0) = (nx56u281lc3y3oj1-0 * n2j3v231m0jk3thv-0 * n7zvuy3clb9jjzjo-0)
 (n7zvuy3clb9jjzjo-0) = From-dB(nglpro485l3w7vt5-0)
 (ny9740b8ps8vevpz-0) = 0.15761893136160715
+(nx56u281lc3y3oj1-0) = arg
 (nyw9qsy1a948rsq-0) = 0.6199999999999999
 nls8ze754hvnf3jy-0
 }
 
-Compressor() {
+Compressor(sig) {
 (nui8cg6e58ra1a7u-0) = Algorithm:Choose(naqbb59fvcpfd9r-0 nbdjiqty2l3i0mp7-0 nk1k4zj2e592kb1s-0)
 (n58x25yrkh7dchb2-0) = (nx90j9zgy8ta02vb-0 * n8ye99ampg83u7u9-0 * n6oc3k2iwxsnye4j-0)
 (n6oc3k2iwxsnye4j-0) = From-dB(n49bdcw73d1waiud-0)
 (n8ye99ampg83u7u9-0) = Lag(np1nrdpppv7qw335-0 nui8cg6e58ra1a7u-0)
 (n49bdcw73d1waiud-0) = 0.665
 (n9rntnwuwx87bu-0) = 1
-(nx90j9zgy8ta02vb-0) = Test-Drums()
+(nx90j9zgy8ta02vb-0) = arg
 (nbdjiqty2l3i0mp7-0) = 0.5433332170758929
 (np1nrdpppv7qw335-0) = Attenuation(nx90j9zgy8ta02vb-0 nfriszr7itzq9kii-0 n9rntnwuwx87bu-0)
 (n7aven0mzg32jp9k-0) = n58x25yrkh7dchb2-0
@@ -42,14 +43,14 @@ Compressor() {
 n7aven0mzg32jp9k-0
 }
 
-Slew-Compressor() {
+Slew-Compressor(in-1) {
 (nhv06346n1a92e71-0) = 0.40761893136160715
 (nsh586ajnd60h2yu-0) = nbs06q3tmi67q4sq-0
 (nbs06q3tmi67q4sq-0) = (nttlq0ohiwatp9eg-0 * n7xq5zbitvoledge-0 * ne4z2uau96ybnkz7-0)
 (ne4z2uau96ybnkz7-0) = From-dB(nsku1e1r55nwj5be-0)
 (nsku1e1r55nwj5be-0) = 0.5399999999999999
 (nb1193sgogopnf41-0) = 0.5076189313616072
-(nttlq0ohiwatp9eg-0) = Test-Drums()
+(nttlq0ohiwatp9eg-0) = arg
 (nl89rjh5fm3q8cqb-0) = 0.6790475027901786
 (n7xq5zbitvoledge-0) = dB-Slew(ngmcunb6iaaxovf-0 nhv06346n1a92e71-0 nl89rjh5fm3q8cqb-0)
 (ntqb2r81bbft58iy-0) = 0.74
@@ -57,7 +58,8 @@ Slew-Compressor() {
 nsh586ajnd60h2yu-0
 }
 
-Analog-Compressor() {
+Analog-Compressor(in-1) {
+;; "Analog" style compressor with some bias and nonlinearity.
 (n5r09ppsh94f1z6r-0) = 8
 (n4z4wza7iqte71e-0) = 0.39619053431919643
 (nw4o4ic4ohhp52t5-0) = Algorithm:Choose(nr7r6qbb4k07ji40-0 ncws4z6gl25m340x-0 n4z4wza7iqte71e-0)
@@ -75,7 +77,7 @@ Analog-Compressor() {
 (nl77a48d59e0s4po-0) = 0.3
 (nubi6e425okqjrpr-0) = no9v2kcse9cn1lp3-0
 (n50t3kl4b5phwccq-0) = (1 - n2ut8qee3q428b6q-0)
-(npcf553s43pp36cy-0) = Test-Drums()
+(npcf553s43pp36cy-0) = arg
 (n9s8zl9td54edudh-0) = 0.2533333914620536
 (nvhe7alru78q9nyj-0) = 0.975
 (ndldc5etdshyahsl-0) = Attenuation(npcf553s43pp36cy-0 n9s8zl9td54edudh-0 n90h3ka7sb22p2l1-0)

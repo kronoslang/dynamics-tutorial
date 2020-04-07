@@ -1,4 +1,17 @@
-{:identifier "Compressor"
+{
+ :draft-argument "Test-Drums()"
+ :export 
+{:arguments 
+{"sig" 
+{:signal-type "audio"}}
+ :export-this-tab true
+ :user-interface 
+{"attack" true
+ "makeup gain" true
+ "ratio" true
+ "release" true
+ "threshold" true}}
+ :identifier "Compressor"
  :identity "akwctt1u200u8dr"
  :patch
 {:cables
@@ -146,11 +159,11 @@
  }
  "x90j9zgy8ta02vb" 
 {:inputs []
- :label "Test-Drums()"
+ :label "sig = arg"
  :name "test sound"
- :outputs [""]
- :parsed [:fn "Test-Drums" [:tuple]]
+ :outputs ["sig"]
+ :parsed "arg"
  :pos [-457 308]
- }}
+ :selected true}}
  :scale 1
  :scroll [0 0]}}

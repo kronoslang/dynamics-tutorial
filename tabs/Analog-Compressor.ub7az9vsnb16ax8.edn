@@ -1,4 +1,17 @@
-{:identifier "Analog-Compressor"
+{:documentation "\"Analog\" style compressor with some bias and nonlinearity."
+ :draft-argument "Test-Drums()"
+ :export 
+{:arguments 
+{"in-1" 
+{:signal-type "audio"}}
+ :export-this-tab true
+ :user-interface 
+{"attack" true
+ "makeup gain" true
+ "ratio" true
+ "release" true
+ "threshold" true}}
+ :identifier "Analog-Compressor"
  :identity "ub7az9vsnb16ax8"
  :patch
 {:cables
@@ -155,7 +168,7 @@
  :outputs []
  :parsed [:comment "### Next up.... ###\n\n\nThe rest of the tabs in this workspace demonstrate several subcircuits in a compressor:\n\n\n- [Computing target attenuation](#5)\n- [Decibel slew limiter](#6)\n- [Lag circuit](#7)\n- [Decibel to Linear conversion](#8)\n- [Test audio player](#9)"]
  :pos [-454 278]
- :selected true}
+ }
  "o9v2kcse9cn1lp3" 
 {:color 4
  :inputs ["sig"]
@@ -174,12 +187,12 @@
  }
  "pcf553s43pp36cy" 
 {:inputs []
- :label "Test-Drums()"
+ :label "arg"
  :name "test sound"
  :outputs [""]
- :parsed [:fn "Test-Drums" [:tuple]]
+ :parsed "arg"
  :pos [-541 178]
- }
+ :selected true}
  "r7r6qbb4k07ji40" 
 {:inputs ["sig"]
  :label "Control:Edge-($sig)"

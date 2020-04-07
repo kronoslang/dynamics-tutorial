@@ -1,13 +1,25 @@
-{:identifier "Simple-Compressor"
+{:documentation "Simple compressor with a single time constant setting for attack and release."
+ :draft-argument "Test-Drums()"
+ :export 
+{:arguments 
+{"sig" 
+{:signal-type "audio"}}
+ :export-this-tab true
+ :user-interface 
+{"lag time" true
+ "makeup gain" true
+ "ratio" true
+ "threshold" true}}
+ :identifier "Simple-Compressor"
  :identity "3nse16v9u7um7uz"
  :patch
 {:cables
 {["2j3v231m0jk3thv" 0] [:fixed "5mcstichevt59el" 0]
  ["2j3v231m0jk3thv" 1] [:fixed "y9740b8ps8vevpz" 0]
- ["3klnz203x9fs42u" 0] [:fixed "q8prjlc1b7l2i6q" 0]
+ ["3klnz203x9fs42u" 0] [:fixed "x56u281lc3y3oj1" 0]
  ["3klnz203x9fs42u" 1] [:fixed "2j3v231m0jk3thv" 0]
  ["3klnz203x9fs42u" 2] [:fixed "7zvuy3clb9jjzjo" 0]
- ["5mcstichevt59el" 0] [:fixed "q8prjlc1b7l2i6q" 0]
+ ["5mcstichevt59el" 0] [:fixed "x56u281lc3y3oj1" 0]
  ["5mcstichevt59el" 1] [:fixed "m2lcjs8hnfz9efw" 0]
  ["5mcstichevt59el" 2] [:fixed "yw9qsy1a948rsq" 0]
  ["7zvuy3clb9jjzjo" 0] [:fixed "glpro485l3w7vt5" 0]
@@ -87,13 +99,13 @@
  :parsed [:widget "uni72b" 0.1861903599330357 {:type :slider, :limits [[:float "-60"] [:float "0"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
  :pos [-315 -187]
  }
- "q8prjlc1b7l2i6q" 
+ "x56u281lc3y3oj1" 
 {:inputs []
- :label "Test-Drums()"
+ :label "sig = arg"
  :name "test sound"
- :outputs [""]
- :parsed [:fn "Test-Drums" [:tuple]]
- :pos [-320 230]
+ :outputs ["sig"]
+ :parsed "arg"
+ :pos [-457 223]
  }
  "y9740b8ps8vevpz" 
 {:color 3
