@@ -3,7 +3,7 @@
 
 
 
-Package dynamics-tutorial {
+Package Dynamics-Tutorial {
 
 Brief() { 
 ;; Demonstrates building compressors from scratch!
@@ -138,12 +138,14 @@ nte4zfibrqjcug78-0
 }
 
 Test-Drums() {
+(nkn26ljb1rjonl1k-0) = (nbdicwh6o25823el-0 / nr1o47bq73213shh-0)
+(nr1o47bq73213shh-0) = Gen:Rate()
 (n8f266f7rfp9x843-0) = neiwagxlbio3lbjf-0
-(nb6xcgl05paicrdv-0) = 1
-(nbdicwh6o25823el-0 nbdicwh6o25823el-1 nbdicwh6o25823el-2) = :Audio:Loop("drums_dry.wav")
-(neiwagxlbio3lbjf-0) = Eval(nbdicwh6o25823el-2 nj6cegl7sqqt3p-0 )
+(neiwagxlbio3lbjf-0) = Eval(n28o55h7g4mlmdwp-0 nj6cegl7sqqt3p-0 )
+(n28o55h7g4mlmdwp-0) = Function:Wrap-Hermite(nbdicwh6o25823el-2)
+(nyabbsl42bh07c6p-0) = Gen:Signal(nkn26ljb1rjonl1k-0)
 (nj6cegl7sqqt3p-0) = Filter:Integrate(nyabbsl42bh07c6p-0 1)
-(nyabbsl42bh07c6p-0) = Gen:Signal(nb6xcgl05paicrdv-0)
+(nbdicwh6o25823el-0 nbdicwh6o25823el-1 nbdicwh6o25823el-2) = :Audio:Loop("drums_dry.wav")
 n8f266f7rfp9x843-0
 }
 

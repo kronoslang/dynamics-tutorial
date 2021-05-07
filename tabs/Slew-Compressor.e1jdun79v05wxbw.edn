@@ -31,8 +31,7 @@
  :label ";# Slew Compressor #\n\n\nAn alternative means of representing compressor attack and release is to specify them in terms of how rapidly the attenuation can increase or decrease.\n\n\nThis circuit presents `attack` and `release` in terms of decibels per second."
  :outputs []
  :parsed [:comment "# Slew Compressor #\n\n\nAn alternative means of representing compressor attack and release is to specify them in terms of how rapidly the attenuation can increase or decrease.\n\n\nThis circuit presents `attack` and `release` in terms of decibels per second."]
- :pos [-443 -443]
- }
+ :pos [-443 -443]}
  "7xq5zbitvoledge" 
 {:color 4
  :inputs ["sig" "attack" "release"]
@@ -40,8 +39,7 @@
  :name "slew limiter"
  :outputs [""]
  :parsed [:fn "dB-Slew" [:tuple [:free-var "sig"] [:free-var "attack"] [:free-var "release"]]]
- :pos [129 123]
- }
+ :pos [129 123]}
  "b1193sgogopnf41" 
 {:color 3
  :inputs []
@@ -49,46 +47,40 @@
  :name "threshold"
  :outputs [""]
  :parsed [:widget "-7mq1ce" 0.5076189313616072 {:type :slider, :limits [[:float "-50"] [:float "0"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
- :pos [-337 -164]
- }
+ :pos [-337 -164]}
  "bs06q3tmi67q4sq" 
 {:ephemeral-inputs #{"more"}
  :inputs ["a" "b" "more" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more..."]]
- :pos [277 226]
- }
+ :pos [277 226]}
  "e0m0vbrlw2qp7zq" 
 {:color 4
  :inputs []
  :label "; The lag circuit is implemented as a decibel slew limiter on [this tab](#6)"
  :outputs []
  :parsed [:comment "The lag circuit is implemented as a decibel slew limiter on [this tab](#6)"]
- :pos [-283 301]
- }
+ :pos [-283 301]}
  "e4z2uau96ybnkz7" 
 {:inputs ["db"]
  :label "From-dB($db)"
  :outputs [""]
  :parsed [:fn "From-dB" [:tuple [:free-var "db"]]]
- :pos [239 53]
- }
+ :pos [239 53]}
  "gmcunb6iaaxovf" 
 {:inputs ["sig" "threshold" "ratio"]
  :label "Attenuation($sig $threshold $ratio)"
  :name "find gain target"
  :outputs [""]
  :parsed [:fn "Attenuation" [:tuple [:free-var "sig"] [:free-var "threshold"] [:free-var "ratio"]]]
- :pos [-75 123]
- }
+ :pos [-75 123]}
  "gyjda2lxqaupgdc" 
 {:inputs []
  :label ";### Next up... ###\n\n\nAdd some nonlinearity to explore [\"analog\" sounds!](#4)"
  :outputs []
  :parsed [:comment "### Next up... ###\n\n\nAdd some nonlinearity to explore [\"analog\" sounds!](#4)"]
- :pos [424 -88]
- }
+ :pos [424 -88]}
  "hv06346n1a92e71" 
 {:color 3
  :inputs []
@@ -96,8 +88,7 @@
  :name "attack dB/s"
  :outputs [""]
  :parsed [:widget "aawmd" 0.40761893136160715 {:type :slider, :limits [[:float "6"] [:float "2000"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
- :pos [-69 -164]
- }
+ :pos [-69 -164]}
  "l89rjh5fm3q8cqb" 
 {:color 3
  :inputs []
@@ -105,8 +96,7 @@
  :name "release dB/s"
  :outputs [""]
  :parsed [:widget "-50r395" 0.6790475027901786 {:type :slider, :limits [[:float "6"] [:float "100"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
- :pos [36 -164]
- }
+ :pos [36 -164]}
  "sh586ajnd60h2yu" 
 {:cable-midpoints 
 {0 [-75 114]}
@@ -115,8 +105,7 @@
  :name "play here!"
  :outputs ["thru"]
  :parsed [:playback [:free-var "sig"]]
- :pos [125 296]
- }
+ :pos [125 296]}
  "sku1e1r55nwj5be" 
 {:color 3
  :inputs []
@@ -124,8 +113,7 @@
  :name "makeup gain"
  :outputs [""]
  :parsed [:widget "-26ikzc" 0.5399999999999999 {:type :dial, :skin :circular, :min [:float "-24"], :max [:float "24"]}]
- :pos [130 -164]
- }
+ :pos [130 -164]}
  "tqb2r81bbft58iy" 
 {:color 3
  :inputs []
@@ -133,8 +121,7 @@
  :name "ratio"
  :outputs [""]
  :parsed [:widget "-kcgzo7" 0.74 {:type :dial, :skin :circular, :min [:float "1"], :max [:float "8"]}]
- :pos [-221 -164]
- }
+ :pos [-221 -164]}
  "ttlq0ohiwatp9eg" 
 {:inputs []
  :label "arg"
